@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAZY MINDAY - Career Journey</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         /* Global styles */
         :root {
@@ -54,22 +54,22 @@
             background-color: #ddd;
         }
         
-        .story-subtitle {
-            font-family: 'Caveat', cursive;
-            font-size: 1.1rem;
-            opacity: 0.8;
-            margin-bottom: 10px;
+        .story-behind {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
             font-weight: 500;
-            letter-spacing: 1px;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
         
         h1 {
-            font-family: 'Caveat', cursive;
-            font-size: 3.8rem;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-size: 3.2rem;
             margin-bottom: 10px;
-            font-weight: 700;
+            font-weight: 800;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            letter-spacing: 2px;
+            letter-spacing: -0.02em;
         }
         
         .tagline {
@@ -204,8 +204,6 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
         }
         
         .highlight-card:hover {
@@ -215,20 +213,13 @@
         
         .highlight-image {
             width: 100%;
-            height: auto;
-            min-height: 200px;
-            object-fit: contain;
-            background-color: #f8f9fa;
-            padding: 10px;
-            flex-shrink: 0;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
         }
         
         .highlight-content {
             padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
         
         .highlight-title {
@@ -293,7 +284,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
             overflow: hidden;
-            min-height: 200px;
         }
         
         .timeline-content:hover {
@@ -313,20 +303,13 @@
         
         .timeline-image {
             width: 40%;
-            height: auto;
-            min-height: 200px;
-            object-fit: contain;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 10px;
-            flex-shrink: 0;
+            min-height: 100%;
+            object-fit: cover;
         }
         
         .timeline-text {
             width: 60%;
             padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
         
         .timeline-date {
@@ -446,10 +429,6 @@
         
         /* Responsive design */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 3rem;
-            }
-            
             .stats {
                 flex-direction: column;
                 gap: 15px;
@@ -475,7 +454,7 @@
             
             .timeline-image {
                 width: 100%;
-                min-height: 180px;
+                height: 180px;
             }
             
             .timeline-text {
@@ -490,6 +469,14 @@
                 top: 10px;
                 right: 10px;
                 padding: 8px 12px;
+            }
+            
+            .story-behind {
+                font-size: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -506,10 +493,10 @@
         <div class="container">
             <!-- Updated image path -->
             <img src="images/Web-Profile-Swap.gif" alt="Streamer Profile" class="profile-pic">
-            <p class="story-subtitle">
+            <div class="story-behind">
                 <span class="english">The Story Behind</span>
                 <span class="thai">เรื่องราวเบื้องหลัง</span>
-            </p>
+            </div>
             <h1>LAZY MINDAY</h1>
             <p class="tagline">
                 <span class="english">GM × Streamer × ENG Teacher</span>
@@ -528,7 +515,7 @@
                     <div class="stat-number">550K+</div>
                     <div class="stat-label">
                         <span class="english">TikTok Fans</span>
-                        <span class="thai">ผู้ติดตาม TikTok</span>
+                        <span class="thai">แฟน TikTok</span>
                     </div>
                 </a>
                 <a href="https://www.youtube.com/@LAZYMINDAY" target="_blank" class="stat-item stat-link">
@@ -538,7 +525,7 @@
                     <div class="stat-number">250K+</div>
                     <div class="stat-label">
                         <span class="english">YouTube Fans</span>
-                        <span class="thai">ผู้ติดตาม YouTube</span>
+                        <span class="thai">แฟน YouTube</span>
                     </div>
                 </a>
             </div>
@@ -679,7 +666,7 @@
                         <img src="images/Career_Timeline_Sponsor Infinix Free Fire Star Clash 2022.jpg" alt="Infinix Free Fire Event" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2022</span>
-                            <h3 class="timeline-title">COLLABORATION</h3>
+                            <h3 class="timeline-title">SPONSORSHIP</h3>
                             <p class="thai">Infinix Free Fire Star Clash 2022</p>
                             <p class="english">Infinix Free Fire Star Clash 2022</p>
                         </div>
@@ -727,7 +714,7 @@
                         <img src="images/Career_Timeline_Press & Media_Dek-D.png" alt="Press & Media - Dek-D Interview" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2020</span>
-                            <h3 class="timeline-title">PRESS & MEDIA</h3>
+                            <h3 class="timeline-title">Press & Media</h3>
                             <p class="thai">📰 สัมภาษณ์กับ Dek-D หัวข้อ "(รีวิวอาชีพ) จบ GSSE เข้าไปทำงานให้กับบริษัทเกม E-Sport ได้ด้วยนะ!"</p>
                             <p class="english">📰 Featured interview with Dek-D on "Career Review: GSSE Graduates Can Work in Gaming and E-Sports Companies!"</p>
                         </div>
@@ -748,17 +735,142 @@
                 </div>
 
                 <div class="timeline-item">
+                    <a href="https://www.dek-d.com/board/knowledge/3994606/" target="_blank" class="timeline-content timeline-link">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_2_Career_GarenaAcademy.jpg" alt="Game Publisher Job" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2019-2022</span>
+                            <h3 class="timeline-title">CAREER</h3>
+                            <p class="thai">📚🎮 ร่วมพัฒนาโครงการแนะแนวอาชีพด้านเกมและอีสปอร์ต สำหรับนักเรียน นักศึกษา และครูผู้สอน ผ่านช่องทางออนไลน์และกิจกรรมออฟไลน์</p>
+                            <p class="english">📚🎮 Developed career guidance initiatives in gaming and esports for students and educators through online platforms and offline activities</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="timeline-item">
                     <div class="timeline-content">
                         <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_เกียรตินิยมธรรมศาสตร์.jpg" alt="University Graduate" class="timeline-image">
+                        <img src="images/Career_Timeline_เกียรตินิยมธรรมศาสตร์.jpg" alt="University Graduation" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2019</span>
                             <h3 class="timeline-title">EDUCATION</h3>
-                            <p class="thai">🎓 สำเร็จการศึกษาจากมหาวิทยาลัยธรรมศาสตร์ เกียรตินิยมอันดับ 1 สาขาโลกคดีศึกษาและการประกอบการสังคม</p>
-                            <p class="english">🎓 Graduated with First Class Honours from Thammasat University in Global Studies and Social Entrepreneurship</p>
+                            <p class="thai">ได้รับ การศึกษาเกียรตินิยม มหาวิทยาลัยธรรมศาสตร์</p>
+                            <p class="english">Degree Honor Graduate; Thammasat University</p>
                         </div>
                     </div>
                 </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/Career_Timeline_2_Teaching.jpg" alt="Teaching" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2018</span>
+                            <h3 class="timeline-title">Teaching</h3>
+                            <p class="thai">เป็นติวเตอร์สอนภาษาอังกฤษ</p>
+                            <p class="english">Started working as an English tutor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <a href="https://siamrath.co.th/n/25835" target="_blank" class="timeline-content timeline-link">
+                        <img src="images/Career_Timeline_2_PressAndMedia_SiamGov.jpg" alt="Press and Media" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2017</span>
+                            <h3 class="timeline-title">Press & Media</h3>
+                            <p class="thai">📰 สัมภาษณ์กับ สยามรัฐ ในหัวข้อ "คนรุ่นใหม่ในบทบาท Global Citizen</p>
+                            <p class="english">📰 Featured interview with Siam Rath newspaper on "Young Generation as Global Citizens</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_นักเรียนแลกเปลี่ยน.jpg" alt="Exchange Student" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2017</span>
+                            <h3 class="timeline-title">EDUCATION</h3>
+                            <p class="thai">🪖 นักเรียนแลกเปลี่ยนที่ประเทศอเมริกา มหาวิทยาลัย University of North Georgia</p>
+                            <p class="english">🪖 Exchange Student; University of North Georgia, USA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2016</span>
+                            <h3 class="timeline-title">EDUCATION</h3>
+                            <p class="thai">🧰 ผู้เข้ารอบ 3 คนสุดท้ายในการแข่งขันกรณีศึกษาสุขภาพโลก APRU; กรุงมะนิลา ประเทศฟิลิปปินส์</p>
+                            <p class="english">🧰 Top 3 Finalists; APRU Global Health Case Competition; Manila, Philippines</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_หัวหน้าหลีดคณะ.jpg" alt="Team Leader" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2016</span>
+                            <h3 class="timeline-title">ACTIVITY</h3>
+                            <p class="thai">📣 หัวหน้าหลีดคณะ</p>
+                            <p class="english">📣 Became a lead cheerleader</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/Career_Timeline_Education_30History.png" alt="Education - History Presentation Achievement" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2013</span>
+                            <h3 class="timeline-title">EDUCATION</h3>
+                            <p class="thai">👩‍🏫 ต้นปีได้คะแนนการพูดหน้าชั้นเรียนวิชาประวัติศาสตร์ 17/30 จึงตั้งใจศึกษาวิธีการพูดจากเพื่อน ท้ายปีได้คะแนน 30 เต็ม ดีใจมากๆ (หัวข้อ อูฑในประเทศอียิปต์)</p>
+                            <p class="english">👩‍🏫 Started the academic year with a presentation score of 17 out of 30 in History class. Through learning effective speaking techniques from classmates, I achieved a perfect score of 30/30 by year-end with my presentation on "Camels in Egypt."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/Career_Timeline_Digital Literacy_ScamFriend.png" alt="Digital Literacy - Online Scam Experience" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2010</span>
+                            <h3 class="timeline-title">DIGITAL LITERACY</h3>
+                            <p class="thai">😨💸 ถูกเพื่อนสนิทที่เจอในเกมออนไลน์ หลอกโกงเงิน รู้สึกผิดหวังและเศร้ามาก</p>
+                            <p class="english">😨💸 Was scammed out of money by a close friend met in an online game. Felt very disappointed and sad.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_2_Gamer_Audition.jpg" alt="Young Gamer Competition" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">Age 10</span>
+                            <h3 class="timeline-title">GAMER</h3>
+                            <p class="thai">แข่งเกม Audition ในงาน Thailand Game Show ชนะ! ได้กระเป๋าผ้า ดินสอ จากงาน รู้สึกดีใจ ภูมิใจมากกก</p>
+                            <p class="english">Competed in Audition game at Thailand Game Show, won a tote bag and pencils from the event. Felt very happy and proud!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_1_Gamer.jpg" alt="Young Gamer" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2006</span>
+                            <h3 class="timeline-title">Activity</h3>
+                            <p class="thai">🎮 เด็กติดเกมโยวกัง และ ออดิชัน จนใฝ่ฝันอยากเป็น GM (แม้ผู้คนรอบข้างจะไม่เห็นด้วยกับความฝันนี้)</p>
+                            <p class="english">🎮 Played Yulgang Online and aspired to become a Game Master, despite lacking encouragement from my surroundings</p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -766,45 +878,64 @@
     <!-- Footer Section -->
     <footer>
         <div class="container">
+            <p class="english">Connect with LAZY MINDAY across social media platforms and LINE: contact.minday</p>
+            <p class="thai">ติดตาม LAZY MINDAY ผ่านช่องทางโซเชียลมีเดียและ LINE: contact.minday</p>
+            
             <div class="social-links">
-                <a href="https://www.tiktok.com/@lazyminday" target="_blank">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://www.youtube.com/@LAZYMINDAY" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://linktr.ee/lazyminday" target="_blank">
-                    <i class="fas fa-link"></i>
-                </a>
+                <a href="http://tiktok.com/@lazyminday" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@LAZYMINDAY" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/lazyminday" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="http://facebook.com/lazyminday" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://discord.com/invite/Bc8nRCXzSk" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://line.me/ti/p/worawitwana" target="_blank" aria-label="LINE"><i class="fab fa-line"></i></a>
             </div>
-            <div class="copyright">
-                <span class="english">© 2025 LAZY MINDAY. All rights reserved.</span>
-                <span class="thai">© 2025 LAZY MINDAY. สงวนลิขสิทธิ์</span>
-            </div>
+            
+            <p class="copyright">&copy; 2025 LAZY MINDAY. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Language toggle functionality
-        const languageButtons = document.querySelectorAll('.language-btn');
-        const body = document.body;
-
-        languageButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const lang = button.getAttribute('data-lang');
-                
-                // Remove active class from all buttons
-                languageButtons.forEach(btn => btn.classList.remove('active'));
-                
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                // Toggle language class on body
-                if (lang === 'th') {
-                    body.classList.add('lang-th');
-                } else {
-                    body.classList.remove('lang-th');
-                }
+        // JavaScript for animations and language toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate timeline items on scroll
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            timelineItems.forEach(item => {
+                item.style.opacity = 0;
+                item.style.transform = 'translateY(50px)';
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(item);
+            });
+            
+            // Language toggle functionality
+            const languageButtons = document.querySelectorAll('.language-btn');
+            
+            languageButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    
+                    // Remove active class from all buttons
+                    languageButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Toggle body class for language
+                    if (lang === 'th') {
+                        document.body.classList.add('lang-th');
+                    } else {
+                        document.body.classList.remove('lang-th');
+                    }
+                });
             });
         });
     </script>
