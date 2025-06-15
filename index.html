@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAZY MINDAY - Career Journey</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Global styles */
         :root {
@@ -54,14 +55,24 @@
         }
         
         h1 {
-            font-size: 2.8rem;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.2rem;
             margin-bottom: 10px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .tagline {
             font-size: 1.2rem;
             opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .contact-line {
+            font-size: 1.1rem;
+            opacity: 0.9;
             margin-bottom: 25px;
+            font-weight: 500;
         }
         
         .stats {
@@ -76,6 +87,26 @@
             padding: 15px 25px;
             border-radius: 10px;
             backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .stat-item:last-child {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .stat-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 5px;
+        }
+        
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            color: white;
         }
         
         .stat-number {
@@ -87,6 +118,31 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+        
+        .linktree-simple {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .linktree-simple a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        .linktree-simple a:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        
+        .linktree-simple i {
+            font-size: 1.2rem;
         }
         
         /* Highlights section */
@@ -108,7 +164,7 @@
             bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 70px;
+            width: 140px;
             height: 4px;
             background-color: var(--accent-color);
         }
@@ -394,16 +450,23 @@
     <!-- Header Section -->
     <header>
         <div class="container">
-            <!-- Corrected image path -->
-            <img src="images/Web-Profile.png" alt="Streamer Profile" class="profile-pic">
+            <!-- Updated image path -->
+            <img src="images/Web-Profile-Swap.gif" alt="Streamer Profile" class="profile-pic">
             <h1>LAZY MINDAY</h1>
             <p class="tagline">
-                <span class="english">GM × Streamer × ENG Teacher work LINE: contact.minday</span>
-                <span class="thai">เกมมาสเตอร์ × สตรีมเมอร์ × ครูสอนภาษาอังกฤษ LINE: contact.minday</span>
+                <span class="english">GM × Streamer × ENG Teacher</span>
+                <span class="thai">เกมมาสเตอร์ × สตรีมเมอร์ × ครูสอนภาษาอังกฤษ</span>
+            </p>
+            <p class="contact-line">
+                <span class="english">Work LINE: contact.minday</span>
+                <span class="thai">LINE: contact.minday</span>
             </p>
             
             <div class="stats">
                 <div class="stat-item">
+                    <div class="stat-header">
+                        <i class="fab fa-tiktok social-icon"></i>
+                    </div>
                     <div class="stat-number">550K+</div>
                     <div class="stat-label">
                         <span class="english">TikTok Fans</span>
@@ -411,6 +474,9 @@
                     </div>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-header">
+                        <i class="fab fa-youtube social-icon"></i>
+                    </div>
                     <div class="stat-number">250K+</div>
                     <div class="stat-label">
                         <span class="english">YouTube Fans</span>
@@ -418,54 +484,58 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="linktree-simple">
+                <a href="https://linktr.ee/lazyminday" target="_blank">
+                    <i class="fas fa-link"></i>
+                    <span class="english">Linktree</span>
+                    <span class="thai">Linktree</span>
+                </a>
+            </div>
         </div>
     </header>
     
     <!-- Career Highlights Section -->
     <section class="highlights">
         <div class="container">
-            <h2 class="section-title">Career Highlights</h2>
+            <h2 class="section-title">Highlights</h2>
             <p class="english">The defining moments that shaped LAZY MINDAY's journey</p>
             <p class="thai">ช่วงเวลาสำคัญที่หล่อหลอมการเดินทางของ LAZY MINDAY</p>
             
             <div class="highlights-grid">
                 <div class="highlight-card">
                     <!-- Corrected image path based on your GitHub repo -->
-                    <img src="images/Career_Highlight_สร้างช่อง LazyMinday.jpg" alt="Content Creator" class="highlight-image">
+                    <img src="Career_Timeline_เกียรตินิยมธรรมศาสตร์.jpg.jpg" alt="First Class Honours Graduate" class="highlight-image">
                     <div class="highlight-content">
-                        <h3 class="highlight-title">Content Creator Journey</h3>
-                        <p class="highlight-desc english">From casual gamer to professional content creator with over 550K TikTok fans and 250K YouTube subscribers.</p>
-                        <p class="highlight-desc thai">จากเกมเมอร์ทั่วไปสู่ครีเอเตอร์มืออาชีพที่มีผู้ติดตามกว่า 550K คนใน TikTok และ 250K คนใน YouTube</p>
+                        <h3 class="highlight-title">
+                            <span class="english">First Class Honours Graduate</span>
+                            <span class="thai">บัณฑิตเกียรตินิยมอันดับ 1</span>
+                        </h3>
+                        <p class="highlight-desc english">Thammasat University (Global Studies and Social Entrepreneurship)</p>
+                        <p class="highlight-desc thai">มหาวิทยาลัยธรรมศาสตร์ (โลกคดีศึกษาและการประกอบการสังคม)</p>
                     </div>
                 </div>
                 
                 <div class="highlight-card">
                     <!-- Corrected image path -->
-                    <img src="images/Career_Timeline_Samsung Galaxy Unpacked 2023.jpg" alt="Samsung Partnership" class="highlight-image">
+                    <img src="images/Career_Timeline_จีเอม.jpg" alt="Game Master And Streame" class="highlight-image">
                     <div class="highlight-content">
-                        <h3 class="highlight-title">Samsung Partnership</h3>
-                        <p class="highlight-desc english">Featured in multiple Samsung events including Galaxy Unpacked in Seoul, Korea and Paris, France.</p>
-                        <p class="highlight-desc thai">ได้ร่วมงานกับ Samsung หลายงาน รวมถึงงาน Galaxy Unpacked ที่กรุงโซล ประเทศเกาหลี และปารีส ประเทศฝรั่งเศส</p>
+                        <h3 class="highlight-title">
+                            <span class="english">Game Master & Streamer</span>
+                            <span class="thai">GM & สตรีมเมอร์</span>
+                        </h3>
+                        <p class="highlight-desc english">Teaching English and Digital Literacy through Gaming Content</p>
+                        <p class="highlight-desc thai">สอนภาษาอังกฤษ และ ความรู้ด้านสื่อดิจิทัล ผ่านคอนเทนต์เกม</p>
                     </div>
                 </div>
                 
                 <div class="highlight-card">
                     <!-- Corrected image path -->
-                    <img src="images/Career_Timeline_จีเอม.jpg" alt="Gaming Career" class="highlight-image">
+                    <img src="images/Career_Timeline_Collaboration_YSEALI.jpg" alt="Global Collaboration" class="highlight-image">
                     <div class="highlight-content">
-                        <h3 class="highlight-title">From Gamer to GM</h3>
-                        <p class="highlight-desc english">Realized childhood dream of working in the gaming industry as GM International Game Publisher from 2019-2022.</p>
-                        <p class="highlight-desc thai">สานฝันวัยเด็กในการทำงานในวงการเกมในฐานะ GM International Game Publisher ตั้งแต่ปี 2019-2022</p>
-                    </div>
-                </div>
-                
-                <div class="highlight-card">
-                    <!-- Corrected image path -->
-                    <img src="images/Career_Highlight_สร้างช่อง LazyMinday.jpg" alt="LazyMinday Channel" class="highlight-image">
-                    <div class="highlight-content">
-                        <h3 class="highlight-title">LazyMinday Channel</h3>
-                        <p class="highlight-desc english">Established the LazyMinday brand and community across multiple social media platforms.</p>
-                        <p class="highlight-desc thai">สร้างแบรนด์และชุมชน LazyMinday บนแพลตฟอร์มโซเชียลมีเดียหลายแห่ง</p>
+                        <h3 class="highlight-title">Global Collaboration</h3>
+                        <p class="highlight-desc english">Government Relations and International Brand Partnerships</p>
+                        <p class="highlight-desc thai">Government Relations and International Brand Partnerships</p>
                     </div>
                 </div>
             </div>
@@ -483,12 +553,25 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_1_Gamer.jpg" alt="Young Gamer" class="timeline-image">
+                        <img src="images/Career_Timeline_Collaboration_YSEALI.jpg" alt="YSEALI" class="timeline-image">
                         <div class="timeline-text">
-                            <span class="timeline-date">2006</span>
-                            <h3 class="timeline-title">INSPIRATION</h3>
-                            <p class="thai">เล่นเกมโยวกัง แล้วรู้สึกว่า GM เท่มาก (แต่คนรอบข้างไม่มีใครอยากให้เป็น)</p>
-                            <p class="english">Played Yulgang online game and dreamed of becoming a GM because it seemed cool (though no one around supported this dream)</p>
+                            <span class="timeline-date">2025</span>
+                            <h3 class="timeline-title">COLLABORATION</h3>
+                            <p class="thai">🌏🇵🇭 Yseali Creator Co-Lab, YSEALI Creator Co-Lab พบปะ เพื่อนๆครีเอเตอร์จากประเทศใน ASEAN และติมอร์-เลสเต; กรุงมะนิลา ฟิลิปปินส์</p>
+                            <p class="english">🌏🇵🇭 YSEALI Creator Co-Lab, meeting with content creators across ASEAN and Timor-Leste; Manila, Philippines</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="Career_Timeline_Collaboration_GCED CDI" alt="GCED CDI" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2024</span>
+                            <h3 class="timeline-title">Career</h3>
+                            <p class="thai">🏛️ ร่วมงานกับ สพฐ. กระทรวงศึกษาธิการ โครงการ GCED CDI</p>
+                            <p class="english">🏛️ Collaboration with Office of the Basic Education Commission (OBEC), Ministry of Education on GCED CDI project</p>
                         </div>
                     </div>
                 </div>
@@ -496,58 +579,73 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_2_Gamer_Audition.jpg" alt="Young Gamer Competition" class="timeline-image">
+                        <img src="images/Career_Timeline_Samsung Galaxy Unpacked Paris France 2024.jpg" alt="Samsung Event France" class="timeline-image">
                         <div class="timeline-text">
-                            <span class="timeline-date">Age 10</span>
-                            <h3 class="timeline-title">GAMER</h3>
-                            <p class="thai">แข่งเกม Audition ในงาน Thailand Game Show ชนะ! ได้กระเป๋าผ้า ดินสอ จากงาน รู้สึกดีใจ ภูมิใจมากกก</p>
-                            <p class="english">Competed in Audition game at Thailand Game Show, won a cloth bag and pencils from the event. Felt very happy and proud!</p>
+                            <span class="timeline-date">2024</span>
+                            <h3 class="timeline-title">COLLABORATION</h3>
+                            <p class="thai">📱🇫🇷 Samsung Galaxy Unpacked; Paris, France</p>
+                            <p class="english">📱🇫🇷 Samsung Galaxy Unpacked; Paris, France</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-content">                        
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_Samsung PlayGalaxy Cup Asia Bootcamp Livestream.jpg" alt="Samsung PlayGalaxy Event" class="timeline-image">
                         <div class="timeline-text">
-                            <span class="timeline-date">2010</span>
+                            <span class="timeline-date">2024</span>
+                            <h3 class="timeline-title">COLLABORATION</h3>
+                            <p class="thai">🔴🎤 Host of the Samsung PlayGalaxy Cup Asia Bootcamp Livestream</p>
+                            <p class="english">🔴🎤 Host of the Samsung PlayGalaxy Cup Asia Bootcamp Livestream</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_Samsung Galaxy Unpacked 2023.jpg" alt="Samsung Event Korea" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2023</span>
+                            <h3 class="timeline-title">COLLABORATION</h3>
+                            <p class="thai">Samsung Galaxy Unpacked 2023; Seoul, Korea</p>
+                            <p class="english">Samsung Galaxy Unpacked 2023; Seoul, Korea</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_Sponsor Infinix Free Fire Star Clash 2022.jpg" alt="Infinix Free Fire Event" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2022</span>
+                            <h3 class="timeline-title">SPONSORSHIP</h3>
+                            <p class="thai">Infinix Free Fire Star Clash 2022</p>
+                            <p class="english">Infinix Free Fire Star Clash 2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2022</span>
                             <h3 class="timeline-title">DIGITAL LITERACY</h3>
-                            <p class="thai">ถูกเพื่อนสนิทที่เจอในเกมออนไลน์ หลอกโกงเงิน รู้สึกผิดหวังและเศร้ามาก</p>
-                            <p class="english">Was scammed out of money by a close friend met in an online game. Felt very disappointed and sad.</p>
+                            <p class="thai">🥲 น้องผู้ติดตามเล่าให้ฟังว่า ถูกโกงเงินเติมเกม รู้สึกเสียใจมาก เพราะตัวเองเคยโดนเหมือนกันเมื่อ 12 ปีก่อน ทำให้ปรับเปลี่ยนคอนเทนต์ในช่อง เพิ่มความรู้วิธีป้องกัน ภัยบนโลกออนไลน์</p>
+                            <p class="english">🥲 A young follower told me that they got scammed in an online game purchase, which resonated deeply due to my own similar experience 12 years prior. This prompted a shift in my channel's content to integrate digital safety education throughout my channel</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-text">
-                            <span class="timeline-date">2013</span>
-                            <h3 class="timeline-title">SCHOOL PRESENTATION</h3>
-                            <p class="thai"> ตอนม.2 ได้คะแนนพรีเซนวิชาประวัติศาสตร์ 30 เต็ม 30 ภูมิใจมาก</p>
-                            <p class="english">When I was in 8th grade, I got a perfect score of 30 out of 30 for my history presentation. I was very proud.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_หัวหน้าหลีดคณะ.jpg" alt="Team Leader" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2016</span>
-                            <h3 class="timeline-title">COLLEGE ACTIVITY</h3>
-                            <p class="thai">หัวหน้าหลีดคณะ</p>
-                            <p class="english">Became the lead cheerleader for my faculty</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2016</span>
-                            <h3 class="timeline-title">PITCHING</h3>
-                            <p class="thai">ผู้เข้ารอบ 3 คนสุดท้ายในการแข่งขันกรณีศึกษาสุขภาพโลก APRU; กรุงมะนิลา ประเทศฟิลิปปินส์</p>
-                            <p class="english">Top 3 Finalists; APRU Global Health Case Competition; Manila, Philippines</p>
+                            <span class="timeline-date">2022</span>
+                            <h3 class="timeline-title">VOLUNTEER</h3>
+                            <p class="thai">👶👧 2022 อาสาเป็นผู้ช่วยครูนานาชาติ ระดับชั้น อนุบาล ถึง ประถม ที่ Beacon Learning Center</p>
+                            <p class="english">👶👧 Volunteered as teaching assistant for international kindergarten to elementary students at Beacon Learning Center</p>
                         </div>
                     </div>
                 </div>
@@ -555,12 +653,51 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_นักเรียนแลกเปลี่ยน.jpg" alt="Exchange Student" class="timeline-image">
+                        <img src="images/Career_Highlight_สร้างช่อง LazyMinday.jpg" alt="Content Creator Start" class="timeline-image">
                         <div class="timeline-text">
-                            <span class="timeline-date">2017</span>
-                            <h3 class="timeline-title">Exchange Student</h3>
-                            <p class="thai">นักศึกษาแลกเปลี่ยน มหาวิทยาลัยนอร์ทจอร์เจีย ประเทศสหรัฐอเมริกา</p>
-                            <p class="english">Exchange Student; University of North Georgia, USA</p>
+                            <span class="timeline-date">2021-Present</span>
+                            <h3 class="timeline-title">CONTENT CREATOR</h3>
+                            <p class="thai">🎮 เริ่มสร้างช่อง LAZY MINDAY บน TikTok - รีวิวอาชีพ GM + แนะแนวอาชีพสายเกม - ไลฟ์สตรีมเกม - สอนภาษาอังกฤษ และ ความรู้ด้านสื่อดิจิทัลผ่านคอนเทนต์เกม</p>
+                            <p class="english">🎮 Launched LAZY MINDAY TikTok channel - Game Master career reviews + gaming career guidance, - Live streaming - Teaching English and digital literacy through gaming content</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_2_PressAndMedia_SiamGov.jpg" alt="Press And Media" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2020</span>
+                            <h3 class="timeline-title">Press & Media</h3>
+                            <p class="thai">📰 สัมภาษณ์กับ Dek-D หัวข้อ "(รีวิวอาชีพ) จบ GSSE เข้าไปทำงานให้กับบริษัทเกม E-Sport ได้ด้วยนะ!"</p>
+                            <p class="english">📰 Featured interview with Dek-D on "Career Review: GSSE Graduates Can Work in Gaming and E-Sports Companies!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_จีเอม.jpg" alt="Game Publisher Job" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2019-2022</span>
+                            <h3 class="timeline-title">CAREER</h3>
+                            <p class="thai">🎮❤️ เริ่มทำงานเป็น GM ในบริษัทเกมออนไลน์ ดีใจมากได้ทำอาชีพในฝันแล้ว!</p>
+                            <p class="english">🎮❤️ Started working at an online game publisher company. Proud to pursue my long-held dream career!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_2_Career_GarenaAcademy.jpg" alt="Game Publisher Job" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2019-2022</span>
+                            <h3 class="timeline-title">CAREER</h3>
+                            <p class="thai">📚🎮 ร่วมพัฒนาโครงการแนะแนวอาชีพด้านเกมและอีสปอร์ต สำหรับนักเรียน นักศึกษา และครูผู้สอน ผ่านช่องทางออนไลน์และกิจกรรมออฟไลน์</p>
+                            <p class="english">📚🎮 Developed career guidance initiatives in gaming and esports for students and educators through online platforms and offline activities</p>
                         </div>
                     </div>
                 </div>
@@ -577,16 +714,51 @@
                         </div>
                     </div>
                 </div>
-                
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/Career_Timeline_2_Teaching.jpg" alt="Teaching" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2018</span>
+                            <h3 class="timeline-title">Teaching</h3>
+                            <p class="thai">เป็นติวเตอร์สอนภาษาอังกฤษ</p>
+                            <p class="english">Started working as an English tutor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/Career_Timeline_2_PressAndMedia_SiamGov.jpg" alt="Press and Media" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2017</span>
+                            <h3 class="timeline-title">Press & Media</h3>
+                            <p class="thai">📰 สัมภาษณ์กับ สยามรัฐ ในหัวข้อ "คนรุ่นใหม่ในบทบาท Global Citizen</p>
+                            <p class="english">📰 Featured interview with Siam Rath newspaper on "Young Generation as Global Citizens</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_จีเอม.jpg" alt="Game Publisher Job" class="timeline-image">
+                        <img src="images/Career_Timeline_นักเรียนแลกเปลี่ยน.jpg" alt="Exchange Student" class="timeline-image">
                         <div class="timeline-text">
-                            <span class="timeline-date">2019-2022</span>
-                            <h3 class="timeline-title">CAREER</h3>
-                            <p class="thai">ได้เป็นจีเอมในบริษัทผู้ให้บริการเกมออนไลน์ ดีใจมากได้ทำงานบริษัทเกมแล้ว</p>
-                            <p class="english">I became a GM (Game Master) at an online game service company. I'm very happy to finally work at a gaming company.</p>
+                            <span class="timeline-date">2017</span>
+                            <h3 class="timeline-title">EDUCATION</h3>
+                            <p class="thai">🪖 นักเรียนแลกเปลี่ยนที่ประเทศอเมริกา มหาวิทยาลัย University of North Georgia</p>
+                            <p class="english">🪖 Exchange Student; University of North Georgia, USA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2016</span>
+                            <h3 class="timeline-title">EDUCATION</h3>
+                            <p class="thai">🧰 ผู้เข้ารอบ 3 คนสุดท้ายในการแข่งขันกรณีศึกษาสุขภาพโลก APRU; กรุงมะนิลา ประเทศฟิลิปปินส์</p>
+                            <p class="english">🧰 Top 3 Finalists; APRU Global Health Case Competition; Manila, Philippines</p>
                         </div>
                     </div>
                 </div>
@@ -594,12 +766,12 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <!-- Corrected image path -->
-                        <img src="images/Career_Highlight_สร้างช่อง LazyMinday.jpg" alt="Content Creator Start" class="timeline-image">
+                        <img src="images/Career_Timeline_หัวหน้าหลีดคณะ.jpg" alt="Team Leader" class="timeline-image">
                         <div class="timeline-text">
-                            <span class="timeline-date">2021-Present</span>
-                            <h3 class="timeline-title">CONTENT CREATOR</h3>
-                            <p class="thai">สร้างคอนเทนต์ช่อง LAZY MINDAY บนทิกต็อกและยูทูบ</p>
-                            <p class="english">Content creator; LAZY MINDAY TikTok and YouTube</p>
+                            <span class="timeline-date">2016</span>
+                            <h3 class="timeline-title">ACTIVITY</h3>
+                            <p class="thai">📣 หัวหน้าหลีดคณะ</p>
+                            <p class="english">📣 Became a lead cheerleader</p>
                         </div>
                     </div>
                 </div>
@@ -607,10 +779,21 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-text">
-                            <span class="timeline-date">2022</span>
+                            <span class="timeline-date">2013</span>
+                            <h3 class="timeline-title">EDUCATION</h3>
+                            <p class="thai">👩‍🏫 ต้นปีได้คะแนนการพูดหน้าชั้นเรียนวิชาประวัติศาสตร์ 17/30 จึงตั้งใจศึกษาวิธีการพูดจากเพื่อน ท้ายปีได้คะแนน 30 เต็ม ดีใจมากๆ (หัวข้อ อูฑในประเทศอียิปต์)</p>
+                            <p class="english">👩‍🏫 Started the academic year with a presentation score of 17 out of 30 in History class. Through learning effective speaking techniques from classmates, I achieved a perfect score of 30/30 by year-end with my presentation on "Camels in Egypt."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2010</span>
                             <h3 class="timeline-title">DIGITAL LITERACY</h3>
-                            <p class="thai">น้องผู้ติดตามเล่าให้ฟังว่า ถูกโกงเงินเติมเกม รู้สึกเสียใจที่ช่วยอะไรน้องไม่ได้ ได้แต่ปลอบใจ</p>
-                            <p class="english">An audience told me that they were scammed out of their game purchase money. I feel sad that I couldn't help them. All I could do was comfort them.</p>
+                            <p class="thai">😨💸 ถูกเพื่อนสนิทที่เจอในเกมออนไลน์ หลอกโกงเงิน รู้สึกผิดหวังและเศร้ามาก</p>
+                            <p class="english">😨💸 Was scammed out of money by a close friend met in an online game. Felt very disappointed and sad.</p>
                         </div>
                     </div>
                 </div>
@@ -618,12 +801,12 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_Sponsor Infinix Free Fire Star Clash 2022.jpg" alt="Infinix Free Fire Event" class="timeline-image">
+                        <img src="images/Career_Timeline_2_Gamer_Audition.jpg" alt="Young Gamer Competition" class="timeline-image">
                         <div class="timeline-text">
-                            <span class="timeline-date">2022</span>
-                            <h3 class="timeline-title">SPONSORSHIP</h3>
-                            <p class="thai">Infinix Free Fire Star Clash 2022</p>
-                            <p class="english">Infinix Free Fire Star Clash 2022</p>
+                            <span class="timeline-date">Age 10</span>
+                            <h3 class="timeline-title">GAMER</h3>
+                            <p class="thai">แข่งเกม Audition ในงาน Thailand Game Show ชนะ! ได้กระเป๋าผ้า ดินสอ จากงาน รู้สึกดีใจ ภูมิใจมากกก</p>
+                            <p class="english">Competed in Audition game at Thailand Game Show, won a tote bag and pencils from the event. Felt very happy and proud!</p>
                         </div>
                     </div>
                 </div>
@@ -631,41 +814,16 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_Samsung Galaxy Unpacked 2023.jpg" alt="Samsung Event Korea" class="timeline-image">
+                        <img src="images/Career_Timeline_1_Gamer.jpg" alt="Young Gamer" class="timeline-image">
                         <div class="timeline-text">
-                            <span class="timeline-date">2023</span>
-                            <h3 class="timeline-title">SPONSORSHIP</h3>
-                            <p class="thai">Samsung Galaxy Unpacked 2023; Seoul, Korea</p>
-                            <p class="english">Samsung Galaxy Unpacked 2023; Seoul, Korea</p>
+                            <span class="timeline-date">2006</span>
+                            <h3 class="timeline-title">Activity</h3>
+                            <p class="thai">🎮 เด็กติดเกมโยวกัง และ ออดิชัน จนใฝ่ฝันอยากเป็น GM (แม้ผู้คนรอบข้างจะไม่เห็นด้วยกับความฝันนี้)</p>
+                            <p class="english">🎮 Played Yulgang Online and aspired to become a Game Master, despite lacking encouragement from my surroundings</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_Samsung PlayGalaxy Cup Asia Bootcamp Livestream.jpg" alt="Samsung PlayGalaxy Event" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2024</span>
-                            <h3 class="timeline-title">SPONSORSHIP</h3>
-                            <p class="thai">เป็นพิธีกรและผู้เล่นในการแข่งขัน Samsung PlayGalaxy Cup Asia Bootcamp Livestream</p>
-                            <p class="english">Moderator and Player at Samsung PlayGalaxy Cup Asia Bootcamp Livestream</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_Samsung Galaxy Unpacked Paris France 2024.jpg" alt="Samsung Event France" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2024</span>
-                            <h3 class="timeline-title">SPONSORSHIP</h3>
-                            <p class="thai">Samsung Galaxy Unpacked; Paris, France</p>
-                            <p class="english">Samsung Galaxy Unpacked; Paris, France</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
