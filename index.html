@@ -237,6 +237,142 @@
             margin-bottom: 20px;
         }
         
+        /* Carousel section */
+        .carousel-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 50px auto 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            display: flex;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .carousel-image {
+            width: 50%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .carousel-content {
+            width: 50%;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .carousel-title {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+        
+        .carousel-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background: white;
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carousel-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .carousel-nav.prev {
+            left: 20px;
+        }
+        
+        .carousel-nav.next {
+            right: 20px;
+        }
+
+        /* TikTok Videos section */
+        .tiktok-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .tiktok-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .tiktok-video {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9/16;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tiktok-video:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tiktok-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+        }
+
         /* Timeline section */
         .timeline-section {
             padding: 80px 0;
@@ -433,6 +569,40 @@
         
         /* Responsive design */
         @media (max-width: 768px) {
+            .tiktok-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .carousel-slide {
+                flex-direction: column;
+            }
+            
+            .carousel-image {
+                width: 100%;
+                height: 250px;
+            }
+            
+            .carousel-content {
+                width: 100%;
+                padding: 30px 20px;
+            }
+            
+            .carousel-title {
+                font-size: 1.2rem;
+            }
+            
+            .carousel-nav {
+                display: none;
+            }
+            
+            .tiktok-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
             .stats {
                 flex-direction: column;
                 gap: 15px;
@@ -503,8 +673,8 @@
             </p>
             <h1>LAZY MINDAY</h1>
             <p class="tagline">
-                <span class="english">GM × Streamer × ENG Teacher</span>
-                <span class="thai">เกมมาสเตอร์ × สตรีมเมอร์ × ครูสอนภาษาอังกฤษ</span>
+                <span class="english">Game Master X English teacher</span>
+                <span class="thai">Game Master X ครูสอนภาษาอังกฤษ</span>
             </p>
             <p class="contact-line">
                 <span class="english">Work LINE: contact.minday</span>
@@ -548,8 +718,8 @@
     <section class="highlights">
         <div class="container">
             <h2 class="section-title">Highlights</h2>
-            <p class="english">The defining moments that shaped LAZY MINDAY's journey</p>
-            <p class="thai">ช่วงเวลาสำคัญที่หล่อหลอมการเดินทางของ LAZY MINDAY</p>
+            <p class="english">Let’s follow LAZY MINDAY’s journey!</p>
+            <p class="thai">มาดูการเดินทางของ LAZY MINDAY กัน!</p>
             
             <div class="highlights-grid">
                 <div class="highlight-card">
@@ -591,14 +761,69 @@
         </div>
     </section>
     
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+        <div class="container">
+            <h2 class="section-title">Press & Media</h2>
+            <p class="english">Featured interviews and media coverage highlighting LAZY MINDAY's impact</p>
+            <p class="thai">การสัมภาษณ์และข่าวสารที่นำเสนอผลกระทบของ LAZY MINDAY</p>
+            
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide">
+                        <img src="images/Career_Timeline_Press & Media_Dek-D.png" alt="Dek-D Interview" class="carousel-image">
+                        <div class="carousel-content">
+                            <h3 class="carousel-title english">📰Featured interview with Dek-D on "Career Review: GSSE Graduates Can Work in Gaming and E-Sports Companies!"</h3>
+                            <h3 class="carousel-title thai">📰ให้สัมภาษณ์บทความ Dek-D หัวข้อ "(รีวิวอาชีพ) จบ GSSE เข้าไปทำงานให้กับบริษัทเกม E-Sport ได้ด้วยนะ!"</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="images/Career_Timeline_2_PressAndMedia_SiamGov.jpg" alt="Siam Rath Interview" class="carousel-image">
+                        <div class="carousel-content">
+                            <h3 class="carousel-title thai">📰ให้สัมภาษณ์กับสยามรัฐ ในหัวข้อ "คนรุ่นใหม่ในบทบาท Global Citizen"</h3>
+                            <h3 class="carousel-title english">📰Featured interview with Siam Rath newspaper on "Young Generation as Global Citizens"</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-nav prev" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav next" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-dot active" onclick="currentSlide(1)"></button>
+                    <button class="carousel-dot" onclick="currentSlide(2)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Timeline Section -->
     <section class="timeline-section">
         <div class="container">
             <h2 class="section-title">Career Timeline</h2>
-            <p class="english">The journey from young gamer to international content creator</p>
-            <p class="thai">การเดินทางจากเกมเมอร์วัยเยาว์สู่ครีเอเตอร์ระดับนานาชาติ</p>
+            <p class="english">Journey of a Young Gamer to International Gaming Content Creator</p>
+            <p class="thai">จากเด็กที่ชอบเล่นเกมสู่คอนเทนต์ครีเอเตอร์สายเกมระดับนานาชาติ</p>
             
             <div class="timeline-container">
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_Active Media for Moral Ecosystem จัดโดย ศูนย์คุณธรรม.jpg" alt="Media for Moral Ecosystem" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2025</span>
+                            <h3 class="timeline-title">DIGITAL LITERACY</h3>
+                            <p class="thai">🤝เข้าร่วมอบรมกิจกรรม Active Media for Moral Ecosystem จัดโดย ศูนย์คุณธรรม (องค์การมหาชน)</p>
+                            <p class="english">🤝Active Media for Moral Ecosystem hosted by Moral Center Thailand</p>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <!-- Corrected image path -->
@@ -645,8 +870,8 @@
                         <div class="timeline-text">
                             <span class="timeline-date">2024</span>
                             <h3 class="timeline-title">COLLABORATION</h3>
-                            <p class="thai">🔴🎤 Host of the Samsung PlayGalaxy Cup Asia Bootcamp Livestream</p>
-                            <p class="english">🔴🎤 Host of the Samsung PlayGalaxy Cup Asia Bootcamp Livestream</p>
+                            <p class="thai">🔴🎤Host of the Samsung PlayGalaxy Cup Asia Bootcamp Livestream</p>
+                            <p class="english">🔴🎤พิธีกร และ สตรีมเมอร์ รายการถ่ายทอดสด Samsung PlayGalaxy Cup Asia Bootcamp Livestream</p>
                         </div>
                     </div>
                 </div>
@@ -679,22 +904,24 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
+                        <img src="images/Career_Timeline_Digital Literacy_ScamFriend.png" alt="Digital Literacy - Online Scam Experience" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2022</span>
                             <h3 class="timeline-title">DIGITAL LITERACY</h3>
-                            <p class="thai">🥲 น้องผู้ติดตามเล่าให้ฟังว่า ถูกโกงเงินเติมเกม รู้สึกเสียใจมาก เพราะตัวเองเคยโดนเหมือนกันเมื่อ 12 ปีก่อน ทำให้ปรับเปลี่ยนคอนเทนต์ในช่อง เพิ่มความรู้วิธีป้องกัน ภัยบนโลกออนไลน์</p>
-                            <p class="english">🥲 A young follower told me that they got scammed in an online game purchase, which resonated deeply due to my own similar experience 12 years prior. This prompted a shift in my channel's content to integrate digital safety education throughout my channel</p>
+                            <p class="thai"> น้องผู้ติดตามเล่าให้ฟังว่า ถูกโกงเงินเติมเกม รู้สึกเสียใจมาก เพราะตัวเองเคยโดนเหมือนกันเมื่อ 12 ปีก่อน ทำให้ปรับเปลี่ยนคอนเทนต์ในช่อง เพิ่มความรู้วิธีป้องกัน ภัยบนโลกออนไลน์</p>
+                            <p class="english"> A young follower told me that they got scammed in an online game purchase, which resonated deeply due to my own similar experience 12 years prior. This prompted a shift in my channel's content to integrate digital safety education throughout my channel</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-content">
+                        <img src="images/Career_Timeline_Volunteered as teaching assistant for international kindergarten to elementary students at Beacon Learning Center.jpg" alt="Volunteer" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2022</span>
                             <h3 class="timeline-title">VOLUNTEER</h3>
-                            <p class="thai">👶👧 2022 อาสาเป็นผู้ช่วยครูนานาชาติ ระดับชั้น อนุบาล ถึง ประถม ที่ Beacon Learning Center</p>
-                            <p class="english">👶👧 Volunteered as teaching assistant for international kindergarten to elementary students at Beacon Learning Center</p>
+                            <p class="thai">👶👧2022 จิตอาสาเป็นผู้ช่วยครูนานาชาติ ระดับชั้น อนุบาล ถึง ประถม ที่ Beacon Learning Center</p>
+                            <p class="english">👶👧Volunteered as teaching assistant for international kindergarten to elementary students at Beacon Learning Center</p>
                         </div>
                     </div>
                 </div>
@@ -706,21 +933,21 @@
                         <div class="timeline-text">
                             <span class="timeline-date">2021-Present</span>
                             <h3 class="timeline-title">CONTENT CREATOR</h3>
-                            <p class="thai">🎮 เริ่มสร้างช่อง LAZY MINDAY บน TikTok - รีวิวอาชีพ GM + แนะแนวอาชีพสายเกม - ไลฟ์สตรีมเกม - สอนภาษาอังกฤษ และ ความรู้ด้านสื่อดิจิทัลผ่านคอนเทนต์เกม</p>
-                            <p class="english">🎮 Launched LAZY MINDAY TikTok channel - Game Master career reviews + gaming career guidance, - Live streaming - Teaching English and digital literacy through gaming content</p>
+                            <p class="thai">🎮เริ่มสร้างช่อง LAZY MINDAY บน TikTok - รีวิวอาชีพ GM + แนะแนวอาชีพสายเกม - ไลฟ์สตรีมเกม - สอนภาษาอังกฤษ และ ความรู้ด้านสื่อดิจิทัลผ่านคอนเทนต์เกม</p>
+                            <p class="english">🎮Launched LAZY MINDAY TikTok channel - Game Master career reviews + gaming career guidance, - Live streaming - Teaching English and digital literacy through gaming content</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <a href="https://www.dek-d.com/board/knowledge/3994606/" target="_blank" class="timeline-content timeline-link">
+                    <div class="timeline-content">
                         <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_Press & Media_Dek-D.png" alt="Press & Media - Dek-D Interview" class="timeline-image">
+                        <img src="images/Career_Timeline_2_Career_GarenaAcademy.jpg" alt="Game Publisher Job" class="timeline-image">
                         <div class="timeline-text">
-                            <span class="timeline-date">2020</span>
-                            <h3 class="timeline-title">Press & Media</h3>
-                            <p class="thai">📰 สัมภาษณ์กับ Dek-D หัวข้อ "(รีวิวอาชีพ) จบ GSSE เข้าไปทำงานให้กับบริษัทเกม E-Sport ได้ด้วยนะ!"</p>
-                            <p class="english">📰 Featured interview with Dek-D on "Career Review: GSSE Graduates Can Work in Gaming and E-Sports Companies!"</p>
+                            <span class="timeline-date">2019-2022</span>
+                            <h3 class="timeline-title">CAREER</h3>
+                            <p class="thai">📚🎮ร่วมพัฒนาโครงการแนะแนวอาชีพด้านเกมและอีสปอร์ต สำหรับนักเรียน นักศึกษา และครูผู้สอน ผ่านช่องทางออนไลน์และกิจกรรมออฟไลน์</p>
+                            <p class="english">📚🎮Developed career guidance initiatives in gaming and esports for students and educators through online platforms and offline activities</p>
                         </div>
                     </a>
                 </div>
@@ -732,23 +959,10 @@
                         <div class="timeline-text">
                             <span class="timeline-date">2019-2022</span>
                             <h3 class="timeline-title">CAREER</h3>
-                            <p class="thai">🎮❤️ เริ่มทำงานเป็น GM ในบริษัทเกมออนไลน์ ดีใจมากได้ทำอาชีพในฝันแล้ว!</p>
-                            <p class="english">🎮❤️ Started working at an online game publisher company. Proud to pursue my long-held dream career!</p>
+                            <p class="thai">🎮❤️เริ่มทำงานเป็น GM ในบริษัทเกมออนไลน์ ดีใจมากได้ทำอาชีพในฝันแล้ว!</p>
+                            <p class="english">🎮❤️Started working at an online game publisher company. Proud to pursue my long-held dream career!</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="timeline-item">
-                    <a href="https://www.dek-d.com/board/knowledge/3994606/" target="_blank" class="timeline-content timeline-link">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_2_Career_GarenaAcademy.jpg" alt="Game Publisher Job" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2019-2022</span>
-                            <h3 class="timeline-title">CAREER</h3>
-                            <p class="thai">📚🎮 ร่วมพัฒนาโครงการแนะแนวอาชีพด้านเกมและอีสปอร์ต สำหรับนักเรียน นักศึกษา และครูผู้สอน ผ่านช่องทางออนไลน์และกิจกรรมออฟไลน์</p>
-                            <p class="english">📚🎮 Developed career guidance initiatives in gaming and esports for students and educators through online platforms and offline activities</p>
-                        </div>
-                    </a>
                 </div>
                 
                 <div class="timeline-item">
@@ -758,8 +972,8 @@
                         <div class="timeline-text">
                             <span class="timeline-date">2019</span>
                             <h3 class="timeline-title">EDUCATION</h3>
-                            <p class="thai">ได้รับ การศึกษาเกียรตินิยม มหาวิทยาลัยธรรมศาสตร์</p>
-                            <p class="english">Degree Honor Graduate; Thammasat University</p>
+                            <p class="thai">🎓สำเร็จการศึกษาเกียรตินิยมอันดับ 1 มหาวิทยาลัยธรรมศาสตร์ (โลกคดีศึกษาและการประกอบการสังคม)</p>
+                            <p class="english">🎓1st Class Honor Graduate; Thammasat University (Global Studies and Social Entrepreneurship)</p>
                         </div>
                     </div>
                 </div>
@@ -770,22 +984,10 @@
                         <div class="timeline-text">
                             <span class="timeline-date">2018</span>
                             <h3 class="timeline-title">Teaching</h3>
-                            <p class="thai">เป็นติวเตอร์สอนภาษาอังกฤษ</p>
-                            <p class="english">Started working as an English tutor</p>
+                            <p class="thai">เริ่มเป็นติวเตอร์สอนภาษาอังกฤษ</p>
+                            <p class="english">👩‍🏫 Started working as an English tutor</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="timeline-item">
-                    <a href="https://siamrath.co.th/n/25835" target="_blank" class="timeline-content timeline-link">
-                        <img src="images/Career_Timeline_2_PressAndMedia_SiamGov.jpg" alt="Press and Media" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2017</span>
-                            <h3 class="timeline-title">Press & Media</h3>
-                            <p class="thai">📰 สัมภาษณ์กับ สยามรัฐ ในหัวข้อ "คนรุ่นใหม่ในบทบาท Global Citizen</p>
-                            <p class="english">📰 Featured interview with Siam Rath newspaper on "Young Generation as Global Citizens</p>
-                        </div>
-                    </a>
                 </div>
 
                 <div class="timeline-item">
@@ -795,8 +997,8 @@
                         <div class="timeline-text">
                             <span class="timeline-date">2017</span>
                             <h3 class="timeline-title">EDUCATION</h3>
-                            <p class="thai">🪖 นักเรียนแลกเปลี่ยนที่ประเทศอเมริกา มหาวิทยาลัย University of North Georgia</p>
-                            <p class="english">🪖 Exchange Student; University of North Georgia, USA</p>
+                            <p class="thai">นักเรียนแลกเปลี่ยนที่ประเทศอเมริกา มหาวิทยาลัย University of North Georgia</p>
+                            <p class="english">Exchange Student; University of North Georgia, USA</p>
                         </div>
                     </div>
                 </div>
@@ -804,10 +1006,10 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-text">
-                            <span class="timeline-date">2016</span>
+                            <span class="timeline-date">2017</span>
                             <h3 class="timeline-title">EDUCATION</h3>
-                            <p class="thai">🧰 ผู้เข้ารอบ 3 คนสุดท้ายในการแข่งขันกรณีศึกษาสุขภาพโลก APRU; กรุงมะนิลา ประเทศฟิลิปปินส์</p>
-                            <p class="english">🧰 Top 3 Finalists; APRU Global Health Case Competition; Manila, Philippines</p>
+                            <p class="thai">🧰เข้ารอบ 3 ทีมสุดท้ายในการแข่งขันAPRU Global Health Case Competition; กรุงมะนิลา ประเทศฟิลิปปินส์</p>
+                            <p class="english">🧰Top 3 Finalists; APRU Global Health Case Competition; Manila, Philippines</p>
                         </div>
                     </div>
                 </div>
@@ -831,8 +1033,8 @@
                         <div class="timeline-text">
                             <span class="timeline-date">2013</span>
                             <h3 class="timeline-title">EDUCATION</h3>
-                            <p class="thai">👩‍🏫 ต้นปีได้คะแนนการพูดหน้าชั้นเรียนวิชาประวัติศาสตร์ 17/30 จึงตั้งใจศึกษาวิธีการพูดจากเพื่อน ท้ายปีได้คะแนน 30 เต็ม ดีใจมากๆ (หัวข้อ อูฑในประเทศอียิปต์)</p>
-                            <p class="english">👩‍🏫 Started the academic year with a presentation score of 17 out of 30 in History class. Through learning effective speaking techniques from classmates, I achieved a perfect score of 30/30 by year-end with my presentation on "Camels in Egypt."</p>
+                            <p class="thai">👩‍🏫ต้นปีได้คะแนนการพูดหน้าชั้นเรียนวิชาประวัติศาสตร์ 17/30 จึงตั้งใจศึกษาวิธีการพูดจากเพื่อน ท้ายปีได้คะแนน 30 เต็ม ดีใจมากๆ (หัวข้อ อูฑในประเทศอียิปต์)</p>
+                            <p class="english">👩‍🏫Started the academic year with a presentation score of 17 out of 30 in History class. Through learning effective speaking techniques from classmates, I achieved a perfect score of 30/30 by year-end with my presentation on "Camels in Egypt."</p>
                         </div>
                     </div>
                 </div>
@@ -843,8 +1045,8 @@
                         <div class="timeline-text">
                             <span class="timeline-date">2010</span>
                             <h3 class="timeline-title">DIGITAL LITERACY</h3>
-                            <p class="thai">😨💸 ถูกเพื่อนสนิทที่เจอในเกมออนไลน์ หลอกโกงเงิน รู้สึกผิดหวังและเศร้ามาก</p>
-                            <p class="english">😨💸 Was scammed out of money by a close friend met in an online game. Felt very disappointed and sad.</p>
+                            <p class="thai">😨💸ถูกเพื่อนสนิทที่เจอในเกมออนไลน์ หลอกโกงเงิน รู้สึกผิดหวังและเศร้ามาก</p>
+                            <p class="english">😨💸Was scammed out of money by a close friend met in an online game. Felt very disappointed and sad.</p>
                         </div>
                     </div>
                 </div>
@@ -856,8 +1058,8 @@
                         <div class="timeline-text">
                             <span class="timeline-date">Age 10</span>
                             <h3 class="timeline-title">GAMER</h3>
-                            <p class="thai">แข่งเกม Audition ในงาน Thailand Game Show ชนะ! ได้กระเป๋าผ้า ดินสอ จากงาน รู้สึกดีใจ ภูมิใจมากกก</p>
-                            <p class="english">Competed in Audition game at Thailand Game Show, won a tote bag and pencils from the event. Felt very happy and proud!</p>
+                            <p class="thai">🏆🎮แข่งเกม Audition ในงาน Thailand Game Show ชนะ! ได้กระเป๋าผ้า ดินสอ จากงาน รู้สึกดีใจ ภูมิใจมากกก</p>
+                            <p class="english">🏆🎮Competed in Audition game at Thailand Game Show, won a tote bag and pencils from the event. Felt very happy and proud!</p>
                         </div>
                     </div>
                 </div>
@@ -875,6 +1077,30 @@
                     </div>
                 </div>
                 
+            </div>
+        </div>
+    </section>
+    
+    <!-- TikTok Videos Section -->
+    <section class="tiktok-section">
+        <div class="container">
+            <h2 class="section-title">Videos</h2>
+            <p class="english">LAZY MINDAY's signature contents</p>
+            <p class="thai">เนื้อหาซิกเนเจอร์ของ LAZY MINDAY</p>
+            
+            <div class="tiktok-grid">
+                <div class="tiktok-video">
+                    <iframe src="https://www.tiktok.com/embed/7451907382784888071" allowfullscreen></iframe>
+                </div>
+                <div class="tiktok-video">
+                    <iframe src="https://www.tiktok.com/embed/7166227112200817946" allowfullscreen></iframe>
+                </div>
+                <div class="tiktok-video">
+                    <iframe src="https://www.tiktok.com/embed/7496067440762227975" allowfullscreen></iframe>
+                </div>
+                <div class="tiktok-video">
+                    <iframe src="https://www.tiktok.com/embed/7483086394093571335" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -941,6 +1167,43 @@
                     }
                 });
             });
+            
+            // Carousel functionality
+            let currentSlideIndex = 0;
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const wrapper = document.querySelector('.carousel-wrapper');
+            
+            window.changeSlide = function(direction) {
+                currentSlideIndex += direction;
+                
+                if (currentSlideIndex >= slides.length) {
+                    currentSlideIndex = 0;
+                }
+                if (currentSlideIndex < 0) {
+                    currentSlideIndex = slides.length - 1;
+                }
+                
+                updateCarousel();
+            };
+            
+            window.currentSlide = function(index) {
+                currentSlideIndex = index - 1;
+                updateCarousel();
+            };
+            
+            function updateCarousel() {
+                wrapper.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+                
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlideIndex);
+                });
+            }
+            
+            // Auto-play carousel (optional)
+            setInterval(() => {
+                changeSlide(1);
+            }, 5000);
         });
     </script>
 </body>
