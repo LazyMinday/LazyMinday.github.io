@@ -713,39 +713,49 @@
             
             /* Carousel mobile fixes */
             .carousel-container {
-                min-height: 550px;
+                min-height: auto;
                 margin: 30px auto 0;
+                height: auto;
             }
             
             .carousel-slide {
                 flex-direction: column;
-                min-height: 550px;
+                min-height: auto;
+                height: auto;
+            }
+            
+            .carousel-slide a {
+                flex-direction: column;
+                height: auto;
             }
             
             .carousel-image {
                 width: 100%;
-                height: 200px;
+                height: 220px;
                 flex-shrink: 0;
             }
             
             .carousel-content {
                 width: 100%;
-                padding: 20px 15px 30px 15px;
-                flex: 1;
+                padding: 25px 20px 40px 20px;
                 justify-content: center;
                 text-align: center;
-                min-height: 350px;
-                display: flex;
-                align-items: center;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                display: block;
+                height: auto;
+                min-height: 120px;
             }
             
             .carousel-title {
-                font-size: 0.9rem;
-                line-height: 1.5;
+                font-size: 0.95rem;
+                line-height: 1.4;
                 text-align: center;
                 margin: 0;
                 padding: 0;
                 width: 100%;
+                display: block;
+                color: white;
             }
             
             .carousel-nav {
@@ -866,25 +876,36 @@
             .carousel-container {
                 margin: 20px auto 0;
                 border-radius: 15px;
-                min-height: 500px;
+                height: auto;
+                min-height: auto;
             }
             
             .carousel-slide {
-                min-height: 500px;
+                height: auto;
+                min-height: auto;
+            }
+            
+            .carousel-slide a {
+                flex-direction: column;
+                height: auto;
             }
             
             .carousel-image {
-                height: 180px;
+                height: 200px;
             }
             
             .carousel-content {
-                padding: 15px 12px 25px 12px;
-                min-height: 320px;
+                padding: 20px 15px 35px 15px;
+                min-height: 100px;
+                display: block;
+                height: auto;
             }
             
             .carousel-title {
-                font-size: 0.8rem;
+                font-size: 0.85rem;
                 line-height: 1.4;
+                display: block;
+                color: white;
             }
             
             .timeline-text {
