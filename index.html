@@ -237,7 +237,7 @@
             margin-bottom: 20px;
         }
         
-        /* Carousel section */
+        /* Carousel section - FIXED */
         .carousel-section {
             padding: 80px 0;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -263,26 +263,37 @@
             display: flex;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
+            min-height: 400px;
+        }
+        
+        .carousel-slide a {
+            display: flex;
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
         }
         
         .carousel-image {
             width: 50%;
             height: 400px;
             object-fit: cover;
+            flex-shrink: 0;
         }
         
         .carousel-content {
             width: 50%;
-            padding: 60px 40px;
+            padding: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-align: left;
         }
         
         .carousel-title {
-            font-size: 1.4rem;
-            line-height: 1.4;
+            font-size: 1.3rem;
+            line-height: 1.5;
             margin-bottom: 20px;
+            font-weight: 600;
         }
         
         .carousel-controls {
@@ -569,6 +580,33 @@
         
         /* Responsive design */
         @media (max-width: 768px) {
+            .carousel-slide {
+                flex-direction: column;
+            }
+            
+            .carousel-slide a {
+                flex-direction: column;
+            }
+            
+            .carousel-image {
+                width: 100%;
+                height: 200px;
+            }
+            
+            .carousel-content {
+                width: 100%;
+                padding: 25px;
+                text-align: center;
+            }
+            
+            .carousel-title {
+                font-size: 1.1rem;
+            }
+            
+            .carousel-nav {
+                display: none;
+            }
+            
             .tiktok-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -577,25 +615,21 @@
         
         @media (min-width: 769px) and (max-width: 1024px) {
             .carousel-slide {
-                flex-direction: column;
+                flex-direction: row;
             }
             
             .carousel-image {
-                width: 100%;
-                height: 250px;
+                width: 45%;
+                height: 350px;
             }
             
             .carousel-content {
-                width: 100%;
-                padding: 30px 20px;
+                width: 55%;
+                padding: 30px 25px;
             }
             
             .carousel-title {
                 font-size: 1.2rem;
-            }
-            
-            .carousel-nav {
-                display: none;
             }
             
             .tiktok-grid {
@@ -718,7 +752,7 @@
     <section class="highlights">
         <div class="container">
             <h2 class="section-title">Highlights</h2>
-            <p class="english">Let’s follow LAZY MINDAY’s journey!</p>
+            <p class="english">Let's follow LAZY MINDAY's journey!</p>
             <p class="thai">มาดูการเดินทางของ LAZY MINDAY กัน!</p>
             
             <div class="highlights-grid">
@@ -835,380 +869,3 @@
                         <div class="timeline-text">
                             <span class="timeline-date">2025</span>
                             <h3 class="timeline-title">COLLABORATION</h3>
-                            <p class="thai">🌏🇵🇭 Yseali Creator Co-Lab, YSEALI Creator Co-Lab พบปะ เพื่อนๆครีเอเตอร์จากประเทศใน ASEAN และติมอร์-เลสเต; กรุงมะนิลา ฟิลิปปินส์</p>
-                            <p class="english">🌏🇵🇭 YSEALI Creator Co-Lab, meeting with content creators across ASEAN and Timor-Leste; Manila, Philippines</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_Collaboration_GCED CDI.jpg" alt="GCED CDI" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2024</span>
-                            <h3 class="timeline-title">Career</h3>
-                            <p class="thai">🏛️ ร่วมงานกับ สพฐ. กระทรวงศึกษาธิการ โครงการ GCED CDI</p>
-                            <p class="english">🏛️ Collaboration with Office of the Basic Education Commission (OBEC), Ministry of Education on GCED CDI project</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_Samsung Galaxy Unpacked Paris France 2024.jpg" alt="Samsung Event France" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2024</span>
-                            <h3 class="timeline-title">COLLABORATION</h3>
-                            <p class="thai">📱🇫🇷 Samsung Galaxy Unpacked; Paris, France</p>
-                            <p class="english">📱🇫🇷 Samsung Galaxy Unpacked; Paris, France</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_Samsung PlayGalaxy Cup Asia Bootcamp Livestream.jpg" alt="Samsung PlayGalaxy Event" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2024</span>
-                            <h3 class="timeline-title">COLLABORATION</h3>
-                            <p class="thai">🔴🎤พิธีกร และ สตรีมเมอร์ รายการถ่ายทอดสด Samsung PlayGalaxy Cup Asia Bootcamp Livestream</p>
-                            <p class="english">🔴🎤Samsung PlayGalaxy Cup Asia Bootcamp Livestream</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_Samsung Galaxy Unpacked 2023.jpg" alt="Samsung Event Korea" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2023</span>
-                            <h3 class="timeline-title">COLLABORATION</h3>
-                            <p class="thai">Samsung Galaxy Unpacked 2023; Seoul, Korea</p>
-                            <p class="english">Samsung Galaxy Unpacked 2023; Seoul, Korea</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_Sponsor Infinix Free Fire Star Clash 2022.jpg" alt="Infinix Free Fire Event" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2022</span>
-                            <h3 class="timeline-title">SPONSORSHIP</h3>
-                            <p class="thai">Infinix Free Fire Star Clash 2022</p>
-                            <p class="english">Infinix Free Fire Star Clash 2022</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <img src="images/Career_Timeline_Digital Literacy_ScamFriend.png" alt="Digital Literacy - Online Scam Experience" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2022</span>
-                            <h3 class="timeline-title">DIGITAL LITERACY</h3>
-                            <p class="thai"> น้องผู้ติดตามเล่าให้ฟังว่า ถูกโกงเงินเติมเกม รู้สึกเสียใจมาก เพราะตัวเองเคยโดนเหมือนกันเมื่อ 12 ปีก่อน ทำให้ปรับเปลี่ยนคอนเทนต์ในช่อง เพิ่มความรู้วิธีป้องกัน ภัยบนโลกออนไลน์</p>
-                            <p class="english"> A young follower told me that they got scammed in an online game purchase, which resonated deeply due to my own similar experience 12 years prior. This prompted a shift in my channel's content to integrate digital safety education throughout my channel</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <img src="images/Career_Timeline_Volunteered as teaching assistant for international kindergarten to elementary students at Beacon Learning Center.jpg" alt="Volunteer" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2022</span>
-                            <h3 class="timeline-title">VOLUNTEER</h3>
-                            <p class="thai">👶👧2022 จิตอาสาเป็นผู้ช่วยครูนานาชาติ ระดับชั้น อนุบาล ถึง ประถม ที่ Beacon Learning Center</p>
-                            <p class="english">👶👧Volunteered as teaching assistant for international kindergarten to elementary students at Beacon Learning Center</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Highlight_สร้างช่อง LazyMinday.jpg" alt="Content Creator Start" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2021-Present</span>
-                            <h3 class="timeline-title">CONTENT CREATOR</h3>
-                            <p class="thai">🎮เริ่มสร้างช่อง LAZY MINDAY บน TikTok - รีวิวอาชีพ GM + แนะแนวอาชีพสายเกม - ไลฟ์สตรีมเกม - สอนภาษาอังกฤษ และ ความรู้ด้านสื่อดิจิทัลผ่านคอนเทนต์เกม</p>
-                            <p class="english">🎮Launched LAZY MINDAY TikTok channel - Game Master career reviews + gaming career guidance, - Live streaming - Teaching English and digital literacy through gaming content</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_2_Career_GarenaAcademy.jpg" alt="Game Publisher Job" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2019-2022</span>
-                            <h3 class="timeline-title">CAREER</h3>
-                            <p class="thai">📚🎮ร่วมพัฒนาโครงการแนะแนวอาชีพด้านเกมและอีสปอร์ต สำหรับนักเรียน นักศึกษา และครูผู้สอน ผ่านช่องทางออนไลน์และกิจกรรมออฟไลน์</p>
-                            <p class="english">📚🎮Developed career guidance initiatives in gaming and esports for students and educators through online platforms and offline activities</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_จีเอม.jpg" alt="Game Publisher Job" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2019-2022</span>
-                            <h3 class="timeline-title">CAREER</h3>
-                            <p class="thai">🎮❤️เริ่มทำงานเป็น GM ในบริษัทเกมออนไลน์ ดีใจมากได้ทำอาชีพในฝันแล้ว!</p>
-                            <p class="english">🎮❤️Started working at an online game publisher company. Proud to pursue my long-held dream career!</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_เกียรตินิยมธรรมศาสตร์.jpg" alt="University Graduation" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2019</span>
-                            <h3 class="timeline-title">EDUCATION</h3>
-                            <p class="thai">🎓สำเร็จการศึกษาเกียรตินิยมอันดับ 1 มหาวิทยาลัยธรรมศาสตร์ (โลกคดีศึกษาและการประกอบการสังคม)</p>
-                            <p class="english">🎓1st Class Honor Graduate; Thammasat University (Global Studies and Social Entrepreneurship)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <img src="images/Career_Timeline_2_Teaching.jpg" alt="Teaching" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2018</span>
-                            <h3 class="timeline-title">Teaching</h3>
-                            <p class="thai">เริ่มเป็นติวเตอร์สอนภาษาอังกฤษ</p>
-                            <p class="english">👩‍🏫 Started working as an English tutor</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_นักเรียนแลกเปลี่ยน.jpg" alt="Exchange Student" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2017</span>
-                            <h3 class="timeline-title">EDUCATION</h3>
-                            <p class="thai">นักเรียนแลกเปลี่ยนที่ประเทศอเมริกา มหาวิทยาลัย University of North Georgia</p>
-                            <p class="english">Exchange Student; University of North Georgia, USA</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2017</span>
-                            <h3 class="timeline-title">EDUCATION</h3>
-                            <p class="thai">🧰เข้ารอบ 3 ทีมสุดท้ายในการแข่งขันAPRU Global Health Case Competition; กรุงมะนิลา ประเทศฟิลิปปินส์</p>
-                            <p class="english">🧰Top 3 Finalists; APRU Global Health Case Competition; Manila, Philippines</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_หัวหน้าหลีดคณะ.jpg" alt="Team Leader" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2016</span>
-                            <h3 class="timeline-title">ACTIVITY</h3>
-                            <p class="thai">📣 หัวหน้าหลีดคณะ</p>
-                            <p class="english">📣 Became a lead cheerleader</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <img src="images/Career_Timeline_Education_30History.png" alt="Education - History Presentation Achievement" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2013</span>
-                            <h3 class="timeline-title">EDUCATION</h3>
-                            <p class="thai">👩‍🏫ต้นปีได้คะแนนการพูดหน้าชั้นเรียนวิชาประวัติศาสตร์ 17/30 จึงตั้งใจศึกษาวิธีการพูดจากเพื่อน ท้ายปีได้คะแนน 30 เต็ม ดีใจมากๆ (หัวข้อ อูฑในประเทศอียิปต์)</p>
-                            <p class="english">👩‍🏫Started the academic year with a presentation score of 17 out of 30 in History class. Through learning effective speaking techniques from classmates, I achieved a perfect score of 30/30 by year-end with my presentation on "Camels in Egypt."</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <img src="images/Career_Timeline_Digital Literacy_ScamFriend.png" alt="Digital Literacy - Online Scam Experience" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2010</span>
-                            <h3 class="timeline-title">DIGITAL LITERACY</h3>
-                            <p class="thai">😨💸ถูกเพื่อนสนิทที่เจอในเกมออนไลน์ หลอกโกงเงิน รู้สึกผิดหวังและเศร้ามาก</p>
-                            <p class="english">😨💸Was scammed out of money by a close friend met in an online game. Felt very disappointed and sad.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_2_Gamer_Audition.jpg" alt="Young Gamer Competition" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">Age 10</span>
-                            <h3 class="timeline-title">GAMER</h3>
-                            <p class="thai">🏆🎮แข่งเกม Audition ในงาน Thailand Game Show ชนะ! ได้กระเป๋าผ้า ดินสอ จากงาน รู้สึกดีใจ ภูมิใจมากกก</p>
-                            <p class="english">🏆🎮Competed in Audition game at Thailand Game Show, won a tote bag and pencils from the event. Felt very happy and proud!</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <!-- Corrected image path -->
-                        <img src="images/Career_Timeline_1_Gamer.jpg" alt="Young Gamer" class="timeline-image">
-                        <div class="timeline-text">
-                            <span class="timeline-date">2006</span>
-                            <h3 class="timeline-title">Activity</h3>
-                            <p class="thai">🎮 เด็กติดเกมโยวกัง และ ออดิชัน จนใฝ่ฝันอยากเป็น GM (แม้ผู้คนรอบข้างจะไม่เห็นด้วยกับความฝันนี้)</p>
-                            <p class="english">🎮 Played Yulgang Online and aspired to become a Game Master, despite lacking encouragement from my surroundings</p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    
-    <!-- TikTok Videos Section -->
-    <section class="tiktok-section">
-        <div class="container">
-            <h2 class="section-title">Videos</h2>
-            <p class="english">LAZY MINDAY's signature contents</p>
-            <p class="thai">เนื้อหาซิกเนเจอร์ของ LAZY MINDAY</p>
-            
-            <div class="tiktok-grid">
-                <div class="tiktok-video">
-                    <iframe src="https://www.tiktok.com/embed/7496067440762227975" allowfullscreen></iframe>
-                </div>
-                <div class="tiktok-video">
-                    <iframe src="https://www.tiktok.com/embed/7166227112200817946" allowfullscreen></iframe>
-                </div>
-                <div class="tiktok-video">
-                    <iframe src="https://www.tiktok.com/embed/7498326894694354184" allowfullscreen></iframe>
-                </div>
-                <div class="tiktok-video">
-                    <iframe src="https://www.tiktok.com/embed/7451907382784888071" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p class="english">Connect with LAZY MINDAY across social media platforms and LINE: contact.minday</p>
-            <p class="thai">ติดตาม LAZY MINDAY ผ่านช่องทางโซเชียลมีเดียและ LINE: contact.minday</p>
-            
-            <div class="social-links">
-                <a href="http://tiktok.com/@lazyminday" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.youtube.com/@LAZYMINDAY" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.instagram.com/lazyminday" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="http://facebook.com/lazyminday" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://discord.com/invite/Bc8nRCXzSk" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
-                <a href="https://line.me/ti/p/worawitwana" target="_blank" aria-label="LINE"><i class="fab fa-line"></i></a>
-            </div>
-            
-            <p class="copyright">&copy; 2025 LAZY MINDAY. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // JavaScript for animations and language toggle functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate timeline items on scroll
-            const timelineItems = document.querySelectorAll('.timeline-item');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.2 });
-            
-            timelineItems.forEach(item => {
-                item.style.opacity = 0;
-                item.style.transform = 'translateY(50px)';
-                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(item);
-            });
-            
-            // Language toggle functionality
-            const languageButtons = document.querySelectorAll('.language-btn');
-            
-            languageButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const lang = this.getAttribute('data-lang');
-                    
-                    // Remove active class from all buttons
-                    languageButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Toggle body class for language
-                    if (lang === 'th') {
-                        document.body.classList.add('lang-th');
-                    } else {
-                        document.body.classList.remove('lang-th');
-                    }
-                });
-            });
-            
-            // Carousel functionality
-            let currentSlideIndex = 0;
-            const slides = document.querySelectorAll('.carousel-slide');
-            const dots = document.querySelectorAll('.carousel-dot');
-            const wrapper = document.querySelector('.carousel-wrapper');
-            
-            window.changeSlide = function(direction) {
-                currentSlideIndex += direction;
-                
-                if (currentSlideIndex >= slides.length) {
-                    currentSlideIndex = 0;
-                }
-                if (currentSlideIndex < 0) {
-                    currentSlideIndex = slides.length - 1;
-                }
-                
-                updateCarousel();
-            };
-            
-            window.currentSlide = function(index) {
-                currentSlideIndex = index - 1;
-                updateCarousel();
-            };
-            
-            function updateCarousel() {
-                wrapper.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-                
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentSlideIndex);
-                });
-            }
-            
-            // Auto-play carousel (optional)
-            setInterval(() => {
-                changeSlide(1);
-            }, 5000);
-        });
-    </script>
-</body>
-</html>
