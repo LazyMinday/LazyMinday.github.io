@@ -237,7 +237,7 @@
             margin-bottom: 20px;
         }
         
-        /* Carousel section */
+        /* Carousel section - ENHANCED FOR MOBILE SWIPING */
         .carousel-section {
             padding: 80px 0;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -252,12 +252,20 @@
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             min-height: 400px;
+            touch-action: pan-y pinch-zoom;
+            cursor: grab;
+            user-select: none;
+        }
+        
+        .carousel-container:active {
+            cursor: grabbing;
         }
         
         .carousel-wrapper {
             display: flex;
             transition: transform 0.5s ease-in-out;
             height: 100%;
+            will-change: transform;
         }
         
         .carousel-slide {
@@ -266,6 +274,7 @@
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             min-height: 400px;
+            flex-shrink: 0;
         }
         
         .carousel-slide a {
@@ -273,6 +282,7 @@
             width: 100%;
             text-decoration: none;
             color: inherit;
+            pointer-events: auto;
         }
         
         .carousel-image {
@@ -309,6 +319,7 @@
             transform: translateX(-50%);
             display: flex;
             gap: 10px;
+            z-index: 10;
         }
         
         .carousel-dot {
@@ -318,11 +329,16 @@
             background: rgba(255, 255, 255, 0.5);
             border: none;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        
+        .carousel-dot:hover {
+            transform: scale(1.2);
         }
         
         .carousel-dot.active {
             background: white;
+            transform: scale(1.3);
         }
         
         .carousel-nav {
@@ -337,14 +353,16 @@
             height: 50px;
             border-radius: 50%;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.2s ease;
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 10;
         }
         
         .carousel-nav:hover {
             background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.1);
         }
         
         .carousel-nav.prev {
@@ -711,11 +729,16 @@
                 font-size: 0.8rem;
             }
             
-            /* Carousel mobile fixes */
+            /* Enhanced Carousel mobile fixes */
             .carousel-container {
                 min-height: auto;
                 margin: 30px auto 0;
                 height: auto;
+                cursor: grab;
+            }
+            
+            .carousel-container:active {
+                cursor: grabbing;
             }
             
             .carousel-slide {
@@ -932,7 +955,6 @@
     <!-- Header Section -->
     <header>
         <div class="container">
-            <!-- Updated image path -->
             <img src="images/Web-Profile-Swap.gif" alt="Streamer Profile" class="profile-pic">
             <p class="story-behind">
                 <span class="english">The Story Behind</span>
@@ -990,21 +1012,7 @@
             
             <div class="highlights-grid">
                 <div class="highlight-card">
-                    <!-- Corrected image path based on your GitHub repo -->
                     <img src="images/Career_Highlight_เกียรตินิยมธรรมศาสตร์.jpg" alt="First Class Honours Graduate" class="highlight-image">
-                    <div class="highlight-content">
-                        <h3 class="highlight-title">
-                            <span class="english">First Class Honours Graduate</span>
-                            <span class="thai">บัณฑิตเกียรตินิยมอันดับ 1</span>
-                        </h3>
-                        <p class="highlight-desc english">Thammasat University (Global Studies and Social Entrepreneurship)</p>
-                        <p class="highlight-desc thai">มหาวิทยาลัยธรรมศาสตร์ (โลกคดีศึกษาและการประกอบการสังคม)</p>
-                    </div>
-                </div>
-                
-                <div class="highlight-card">
-                    <!-- Corrected image path -->
-                    <img src="images/Career_Timeline_จีเอม.jpg" alt="Game Master And Streame" class="highlight-image">
                     <div class="highlight-content">
                         <h3 class="highlight-title">
                             <span class="english">Game Master & Streamer</span>
@@ -1016,7 +1024,6 @@
                 </div>
                 
                 <div class="highlight-card">
-                    <!-- Corrected image path -->
                     <img src="images/Career_Timeline_Collaboration_YSEALI.jpg" alt="Global Collaboration" class="highlight-image">
                     <div class="highlight-content">
                         <h3 class="highlight-title">Global Collaboration</h3>
@@ -1028,12 +1035,12 @@
         </div>
     </section>
     
-    <!-- Carousel Section -->
+    <!-- Carousel Section - ENHANCED WITH SWIPE FUNCTIONALITY -->
     <section class="carousel-section">
         <div class="container">
             <h2 class="section-title">Press & Media</h2>
-            <p class="english">Featured interviews and media coverage highlighting LAZY MINDAY</p>
-            <p class="thai">บทสัมภาษณ์และสื่อที่นำเสนอเรื่องราวของ LAZY MINDAY</p>
+            <p class="english">Featured interviews and media coverage</p>
+            <p class="thai">บทสัมภาษณ์และสื่อ</p>
             
             <div class="carousel-container">
                 <div class="carousel-wrapper">
@@ -1085,10 +1092,20 @@
             <p class="thai">จากเด็กที่ชอบเล่นเกมสู่คอนเทนต์ครีเอเตอร์สายเกมระดับนานาชาติ</p>
             
             <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/Career_Timeline_SaturdaySchool.jpg" alt="Volunteer Saturday School" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2025</span>
+                            <h3 class="timeline-title">VOLUNTEER</h3>
+                            <p class="thai">🎥จิตอาสาเป็นครูวิชา content creator ในโครงการของ Saturday School ที่ โรงเรียนเทศบาลวัดเจษฎาราม (เชยวิทยาทาน)</p>
+                            <p class="english">🎥Volunteered as content creator teacher for Saturday School at Watchetsadaram Municipality School</p>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Active Media for Moral Ecosystem จัดโดย ศูนย์คุณธรรม.jpg" alt="Media for Moral Ecosystem" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2025</span>
@@ -1101,7 +1118,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Collaboration_YSEALI.jpg" alt="YSEALI" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2025</span>
@@ -1114,7 +1130,30 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
+                        <img src="images/Career_Timeline_PlayAndLearnLiveStream.png" alt="Community Event" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2025</span>
+                            <h3 class="timeline-title">PLAY&LEARN COMMUNITY</h3>
+                            <p class="thai">🇺🇸🎮ไลฟ์เล่นเกมไป เรียนไป! สอนภาษาอังกฤษผ่านการเล่นเกมกับผู้ติดตาม</p>
+                            <p class="english">🇺🇸🎮 LIVE Stream, game, and teach English for followers!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/Career_Timeline_EnglishQuizReward.png" alt="Community Event" class="timeline-image">
+                        <div class="timeline-text">
+                            <span class="timeline-date">2025</span>
+                            <h3 class="timeline-title">PLAY&LEARN COMMUNITY</h3>
+                            <p class="thai">🎁ผู้ติดตามตอบคำถามภาษาอังกฤษถูก แจกไอเทมเกมฟรี!</p>
+                            <p class="english">🎁Gaming item giveaway through English Q&A Activity!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
                         <img src="images/Career_Timeline_Collaboration_GCED CDI.jpg" alt="GCED CDI" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2024</span>
@@ -1127,12 +1166,11 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Samsung Galaxy Unpacked Paris France 2024.jpg" alt="Samsung Event France" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2024</span>
                             <h3 class="timeline-title">COLLABORATION</h3>
-                            <p class="thai">📱🇫🇷 Samsung Galaxy Unpacked; Paris, France</p>
+                            <p class="thai">📱🇫🇷 ได้รับเชิญร่วมงาน Samsung Galaxy Unpacked 2022; ปารีส, ประเทศฝรั่งเศส</p>
                             <p class="english">📱🇫🇷 Samsung Galaxy Unpacked; Paris, France</p>
                         </div>
                     </div>
@@ -1140,7 +1178,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Samsung PlayGalaxy Cup Asia Bootcamp Livestream.jpg" alt="Samsung PlayGalaxy Event" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2024</span>
@@ -1153,20 +1190,18 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Samsung Galaxy Unpacked 2023.jpg" alt="Samsung Event Korea" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2023</span>
                             <h3 class="timeline-title">COLLABORATION</h3>
-                            <p class="thai">Samsung Galaxy Unpacked 2023; Seoul, Korea</p>
-                            <p class="english">Samsung Galaxy Unpacked 2023; Seoul, Korea</p>
+                            <p class="thai">📱🇰🇷 ได้รับเชิญร่วมงาน Samsung Galaxy Unpacked 2023; โซล, ประเทศเกาหลีใต้</p>
+                            <p class="english">📱🇰🇷 Samsung Galaxy Unpacked 2023; Seoul, Korea</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Sponsor Infinix Free Fire Star Clash 2022.jpg" alt="Infinix Free Fire Event" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2022</span>
@@ -1195,7 +1230,7 @@
                         <div class="timeline-text">
                             <span class="timeline-date">2022</span>
                             <h3 class="timeline-title">VOLUNTEER</h3>
-                            <p class="thai">👶👧2022 จิตอาสาเป็นผู้ช่วยครูนานาชาติ ระดับชั้น อนุบาล ถึง ประถม ที่ Beacon Learning Center</p>
+                            <p class="thai">👶👧จิตอาสาเป็นผู้ช่วยครูนานาชาติ ระดับชั้น อนุบาล ถึง ประถม ที่ Beacon Learning Center</p>
                             <p class="english">👶👧Volunteered as teaching assistant for international kindergarten to elementary students at Beacon Learning Center</p>
                         </div>
                     </div>
@@ -1203,7 +1238,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Highlight_สร้างช่อง LazyMinday.jpg" alt="Content Creator Start" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2021-Present</span>
@@ -1216,7 +1250,6 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_2_Career_GarenaAcademy.jpg" alt="Game Publisher Job" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2019-2022</span>
@@ -1229,7 +1262,6 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_จีเอม.jpg" alt="Game Publisher Job" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2019-2022</span>
@@ -1242,7 +1274,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_เกียรตินิยมธรรมศาสตร์.jpg" alt="University Graduation" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2019</span>
@@ -1267,7 +1298,6 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_นักเรียนแลกเปลี่ยน.jpg" alt="Exchange Student" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2017</span>
@@ -1291,7 +1321,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_หัวหน้าหลีดคณะ.jpg" alt="Team Leader" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2016</span>
@@ -1328,7 +1357,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_2_Gamer_Audition.jpg" alt="Young Gamer Competition" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">Age 10</span>
@@ -1341,7 +1369,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_1_Gamer.jpg" alt="Young Gamer" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2006</span>
@@ -1351,7 +1378,6 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -1360,15 +1386,12 @@
     <section class="videos-section">
         <div class="container">
             <h2 class="section-title">Videos</h2>
-            <p class="english">LAZY MINDAY's signature contents</p>
-            <p class="thai">เนื้อหาซิกเนเจอร์ของ LAZY MINDAY</p>
+            <p class="english">LAZY MINDAY's highlight contents</p>
+            <p class="thai">คลิปไฮไลท์ของช่อง LAZY MINDAY</p>
             
             <div class="videos-grid">
                 <div class="video-container">
                     <iframe src="https://www.tiktok.com/embed/7496067440762227975" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.tiktok.com/embed/7166227112200817946" allowfullscreen></iframe>
                 </div>
                 <div class="video-container">
                     <iframe src="https://www.tiktok.com/embed/7483086394093571335" allowfullscreen></iframe>
@@ -1400,7 +1423,7 @@
     </footer>
 
     <script>
-        // JavaScript for animations and language toggle functionality
+        // COMPLETE ENHANCED SWIPEABLE CAROUSEL JAVASCRIPT
         document.addEventListener('DOMContentLoaded', function() {
             // Animate timeline items on scroll
             const timelineItems = document.querySelectorAll('.timeline-item');
@@ -1443,43 +1466,289 @@
                 });
             });
             
-            // Carousel functionality
+            // ENHANCED SWIPEABLE CAROUSEL FUNCTIONALITY
             let currentSlideIndex = 0;
             const slides = document.querySelectorAll('.carousel-slide');
             const dots = document.querySelectorAll('.carousel-dot');
             const wrapper = document.querySelector('.carousel-wrapper');
+            const carouselContainer = document.querySelector('.carousel-container');
             
-            window.changeSlide = function(direction) {
-                currentSlideIndex += direction;
-                
-                if (currentSlideIndex >= slides.length) {
-                    currentSlideIndex = 0;
+            // Touch/Swipe variables
+            let startX = 0;
+            let currentX = 0;
+            let isDragging = false;
+            let startTime = 0;
+            let initialTransform = 0;
+            let animationId = null;
+            
+            // Auto-play variables
+            let autoPlayInterval;
+            const autoPlayDelay = 5000;
+            
+            // Utility functions
+            function getClientX(e) {
+                return e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+            }
+            
+            function cancelAnimation() {
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                    animationId = null;
                 }
-                if (currentSlideIndex < 0) {
-                    currentSlideIndex = slides.length - 1;
+            }
+            
+            // Touch/Mouse event handlers
+            function startDrag(e) {
+                if (slides.length <= 1) return; // Don't enable drag for single slide
+                
+                startX = getClientX(e);
+                currentX = startX;
+                isDragging = true;
+                startTime = Date.now();
+                initialTransform = currentSlideIndex * -100;
+                
+                // Disable CSS transitions during drag for smooth interaction
+                wrapper.style.transition = 'none';
+                
+                // Stop auto-play during interaction
+                stopAutoPlay();
+                
+                // Cancel any ongoing animations
+                cancelAnimation();
+                
+                // Add visual feedback
+                carouselContainer.style.cursor = 'grabbing';
+                
+                // Prevent default behavior
+                if (e.type === 'touchstart') {
+                    e.preventDefault();
                 }
                 
-                updateCarousel();
-            };
+                // Prevent text selection during drag
+                document.body.style.userSelect = 'none';
+            }
             
-            window.currentSlide = function(index) {
-                currentSlideIndex = index - 1;
-                updateCarousel();
-            };
-            
-            function updateCarousel() {
-                wrapper.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            function drag(e) {
+                if (!isDragging) return;
                 
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentSlideIndex);
+                e.preventDefault(); // Prevent scrolling
+                
+                currentX = getClientX(e);
+                const deltaX = currentX - startX;
+                const deltaPercent = (deltaX / carouselContainer.offsetWidth) * 100;
+                
+                // Calculate new transform with resistance at edges
+                let newTransform = initialTransform + deltaPercent;
+                
+                // Add elastic resistance at the edges
+                const maxTransform = 0;
+                const minTransform = -(slides.length - 1) * 100;
+                
+                if (newTransform > maxTransform) {
+                    // Resistance when swiping beyond first slide
+                    const overscroll = newTransform - maxTransform;
+                    newTransform = maxTransform + (overscroll * 0.3);
+                } else if (newTransform < minTransform) {
+                    // Resistance when swiping beyond last slide
+                    const overscroll = newTransform - minTransform;
+                    newTransform = minTransform + (overscroll * 0.3);
+                }
+                
+                // Apply transform smoothly
+                animationId = requestAnimationFrame(() => {
+                    wrapper.style.transform = `translateX(${newTransform}%)`;
                 });
             }
             
-            // Auto-play carousel (optional)
-            setInterval(() => {
-                changeSlide(1);
-            }, 5000);
+            function endDrag(e) {
+                if (!isDragging) return;
+                
+                isDragging = false;
+                const deltaX = currentX - startX;
+                const deltaTime = Date.now() - startTime;
+                const velocity = Math.abs(deltaX) / deltaTime; // pixels per millisecond
+                
+                // Restore cursor and user selection
+                carouselContainer.style.cursor = 'grab';
+                document.body.style.userSelect = '';
+                
+                // Determine if we should change slides
+                const threshold = carouselContainer.offsetWidth * 0.25; // 25% of container width
+                const minVelocity = 0.3; // minimum velocity for quick swipe
+                
+                const shouldChangeSlide = Math.abs(deltaX) > threshold || velocity > minVelocity;
+                
+                if (shouldChangeSlide) {
+                    if (deltaX > 0 && currentSlideIndex > 0) {
+                        // Swiped right - go to previous slide
+                        changeSlide(-1);
+                    } else if (deltaX < 0 && currentSlideIndex < slides.length - 1) {
+                        // Swiped left - go to next slide
+                        changeSlide(1);
+                    } else {
+                        // At edge - snap back to current slide
+                        updateCarousel(true);
+                    }
+                } else {
+                    // Not enough movement - snap back to current slide
+                    updateCarousel(true);
+                }
+                
+                // Re-enable CSS transitions with smooth timing
+                wrapper.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                
+                // Restart auto-play after a brief delay
+                setTimeout(startAutoPlay, 1000);
+            }
+            
+            // Mouse events
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mousedown', startDrag);
+                document.addEventListener('mousemove', drag);
+                document.addEventListener('mouseup', endDrag);
+                carouselContainer.addEventListener('mouseleave', endDrag);
+                
+                // Touch events with improved passive handling
+                carouselContainer.addEventListener('touchstart', startDrag, { passive: false });
+                document.addEventListener('touchmove', drag, { passive: false });
+                document.addEventListener('touchend', endDrag);
+                document.addEventListener('touchcancel', endDrag);
+                
+                // Prevent context menu on long press
+                carouselContainer.addEventListener('contextmenu', e => e.preventDefault());
+                
+                // Prevent drag on images
+                carouselContainer.addEventListener('dragstart', e => e.preventDefault());
+            }
+            
+            // Navigation functions
+            window.changeSlide = function(direction) {
+                const newIndex = currentSlideIndex + direction;
+                
+                if (newIndex >= slides.length) {
+                    currentSlideIndex = 0;
+                } else if (newIndex < 0) {
+                    currentSlideIndex = slides.length - 1;
+                } else {
+                    currentSlideIndex = newIndex;
+                }
+                
+                updateCarousel(true);
+                restartAutoPlay();
+            };
+            
+            window.currentSlide = function(index) {
+                currentSlideIndex = Math.max(0, Math.min(index - 1, slides.length - 1));
+                updateCarousel(true);
+                restartAutoPlay();
+            };
+            
+            function updateCarousel(animate = false) {
+                if (animate) {
+                    wrapper.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                }
+                
+                wrapper.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlideIndex);
+                });
+                
+                // Update aria labels for accessibility
+                slides.forEach((slide, index) => {
+                    slide.setAttribute('aria-hidden', index !== currentSlideIndex);
+                });
+            }
+            
+            // Auto-play functionality
+            function startAutoPlay() {
+                if (slides.length <= 1) return; // Don't auto-play single slide
+                
+                stopAutoPlay();
+                autoPlayInterval = setInterval(() => {
+                    if (!isDragging && !document.hidden) {
+                        changeSlide(1);
+                    }
+                }, autoPlayDelay);
+            }
+            
+            function stopAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = null;
+                }
+            }
+            
+            function restartAutoPlay() {
+                stopAutoPlay();
+                setTimeout(startAutoPlay, 1000);
+            }
+            
+            // Pause auto-play on hover (desktop only)
+            if (carouselContainer && window.matchMedia('(min-width: 769px)').matches) {
+                carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+                carouselContainer.addEventListener('mouseleave', startAutoPlay);
+            }
+            
+            // Pause auto-play when page is not visible
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    stopAutoPlay();
+                } else {
+                    startAutoPlay();
+                }
+            });
+            
+            // Handle window resize
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    updateCarousel(false);
+                }, 250);
+            });
+            
+            // Initialize carousel
+            if (slides.length > 0) {
+                updateCarousel(false);
+                startAutoPlay();
+            }
+            
+            // Keyboard navigation (accessibility)
+            document.addEventListener('keydown', function(e) {
+                if (e.target.closest('.carousel-container')) {
+                    if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        changeSlide(-1);
+                    } else if (e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        changeSlide(1);
+                    }
+                }
+            });
+            
+            // Focus management for accessibility
+            carouselContainer?.addEventListener('focus', function() {
+                stopAutoPlay();
+            });
+            
+            carouselContainer?.addEventListener('blur', function() {
+                startAutoPlay();
+            });
         });
     </script>
 </body>
-</html>
+</html>">
+                        <h3 class="highlight-title">
+                            <span class="english">First Class Honours Graduate</span>
+                            <span class="thai">บัณฑิตเกียรตินิยมอันดับ 1</span>
+                        </h3>
+                        <p class="highlight-desc english">Thammasat University (Global Studies and Social Entrepreneurship)</p>
+                        <p class="highlight-desc thai">มหาวิทยาลัยธรรมศาสตร์ (โลกคดีศึกษาและการประกอบการสังคม)</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <img src="images/Career_Timeline_จีเอม.jpg" alt="Game Master And Streame" class="highlight-image">
+                    <div class="highlight-content
