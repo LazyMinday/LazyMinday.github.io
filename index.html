@@ -543,34 +543,72 @@
             opacity: 0.8;
         }
         
-        /* Language Toggle */
+        /* Language Toggle with Flags */
         .language-toggle {
             position: fixed;
             top: 20px;
             right: 20px;
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px 15px;
-            border-radius: 30px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 8px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            backdrop-filter: blur(10px);
         }
         
-        .language-btn {
+        .flag-btn {
             background: none;
             border: none;
-            padding: 5px 10px;
             cursor: pointer;
-            font-weight: bold;
-            border-radius: 15px;
+            border-radius: 50%;
+            padding: 6px;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .language-btn.active {
-            background-color: var(--primary-color);
-            color: white;
+        .flag-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .flag-btn.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 4px 15px rgba(147, 112, 219, 0.4);
+            transform: scale(1.05);
+        }
+        
+        .flag-btn.active::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: exclude;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+        }
+        
+        .flag-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .flag-btn.active .flag-icon {
+            transform: scale(0.9);
         }
         
         .thai {
@@ -657,7 +695,17 @@
             .language-toggle {
                 top: 10px;
                 right: 10px;
-                padding: 8px 12px;
+                padding: 6px;
+            }
+            
+            .flag-btn {
+                width: 36px;
+                height: 36px;
+            }
+            
+            .flag-icon {
+                width: 24px;
+                height: 24px;
             }
             
             .story-behind {
@@ -853,13 +901,19 @@
             .language-toggle {
                 top: 10px;
                 right: 10px;
-                padding: 8px 12px;
-                font-size: 0.9rem;
+                padding: 5px;
+                gap: 5px;
             }
             
-            .language-btn {
-                padding: 4px 8px;
-                font-size: 0.9rem;
+            .flag-btn {
+                width: 32px;
+                height: 32px;
+                padding: 4px;
+            }
+            
+            .flag-icon {
+                width: 22px;
+                height: 22px;
             }
         }
         
@@ -919,14 +973,28 @@
             .timeline-text p {
                 font-size: 0.85rem;
             }
+            
+            .flag-btn {
+                width: 28px;
+                height: 28px;
+            }
+            
+            .flag-icon {
+                width: 18px;
+                height: 18px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Language Toggle -->
+    <!-- Language Toggle with Flags -->
     <div class="language-toggle">
-        <button class="language-btn active" data-lang="en">EN</button>
-        <button class="language-btn" data-lang="th">TH</button>
+        <button class="flag-btn active" data-lang="en" title="Switch to English">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMDAyODY4Ii8+CjxwYXRoIGQ9Ik0wIDAgTDEwMCAxMDBNMTAwIDAgTDAgMTAwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEwIi8+CjxwYXRoIGQ9Ik0wIDUwIEwxMDAgNTBNNTAgMCBMNTAgMTAwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjE0Ii8+CjxwYXRoIGQ9Ik0wIDAgTDEwMCAxMDBNMTAwIDAgTDAgMTAwIiBzdHJva2U9IiNjZjE0MmIiIHN0cm9rZS13aWR0aD0iNiIvPgo8cGF0aCBkPSJNMCA1MCBMMTAWIDU1TTUwIDAgTDUwIDEwMCIgc3Ryb2tlPSIjY2YxNDJiIiBzdHJva2Utd2lkdGg9IjgiLz4KPC9zdmc+" alt="USA Flag" class="flag-icon">
+        </button>
+        <button class="flag-btn" data-lang="th" title="Switch to Thai">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRkY0RDQ3Ii8+CjxyZWN0IHk9IjE0LjMiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQuMyIgZmlsbD0iI0ZGRkZGRiIvPgo8cmVjdCB5PSI3MS40IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjE0LjMiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeT0iMjguNiIgd2lkdGg9IjEwMCIgaGVpZ2h0PSI0Mi44IiBmaWxsPSIjMDAwMDk0Ii8+Cjwvc3ZnPg==" alt="Thai Flag" class="flag-icon">
+        </button>
     </div>
     
     <!-- Header Section -->
@@ -1457,15 +1525,15 @@
                 observer.observe(item);
             });
             
-            // Language toggle functionality
-            const languageButtons = document.querySelectorAll('.language-btn');
+            // Language toggle functionality with flags
+            const flagButtons = document.querySelectorAll('.flag-btn');
             
-            languageButtons.forEach(button => {
+            flagButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const lang = this.getAttribute('data-lang');
                     
                     // Remove active class from all buttons
-                    languageButtons.forEach(btn => btn.classList.remove('active'));
+                    flagButtons.forEach(btn => btn.classList.remove('active'));
                     
                     // Add active class to clicked button
                     this.classList.add('active');
