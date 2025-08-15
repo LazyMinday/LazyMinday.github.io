@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -573,20 +573,21 @@
             color: white;
         }
         
+        /* Updated language display rules - Thai as default */
         .thai {
-            display: none;
+            display: block;
         }
         
         .english {
-            display: block;
-        }
-        
-        .lang-th .thai {
-            display: block;
-        }
-        
-        .lang-th .english {
             display: none;
+        }
+        
+        .lang-en .thai {
+            display: none;
+        }
+        
+        .lang-en .english {
+            display: block;
         }
         
         /* Responsive design */
@@ -922,17 +923,16 @@
         }
     </style>
 </head>
-<body>
+<body class="lang-th">
     <!-- Language Toggle -->
     <div class="language-toggle">
-        <button class="language-btn active" data-lang="th">TH</button>
         <button class="language-btn" data-lang="en">EN</button>
+        <button class="language-btn active" data-lang="th">TH</button>
     </div>
     
     <!-- Header Section -->
     <header>
         <div class="container">
-            <!-- Updated image path -->
             <img src="images/Web-Profile-Swap.gif" alt="Streamer Profile" class="profile-pic">
             <p class="story-behind">
                 <span class="english">The Story Behind</span>
@@ -990,7 +990,6 @@
             
             <div class="highlights-grid">
                 <div class="highlight-card">
-                    <!-- Corrected image path based on your GitHub repo -->
                     <img src="images/Career_Highlight_เกียรตินิยมธรรมศาสตร์.jpg" alt="First Class Honours Graduate" class="highlight-image">
                     <div class="highlight-content">
                         <h3 class="highlight-title">
@@ -1003,7 +1002,6 @@
                 </div>
                 
                 <div class="highlight-card">
-                    <!-- Corrected image path -->
                     <img src="images/Career_Timeline_จีเอม.jpg" alt="Game Master And Streame" class="highlight-image">
                     <div class="highlight-content">
                         <h3 class="highlight-title">
@@ -1016,7 +1014,6 @@
                 </div>
                 
                 <div class="highlight-card">
-                    <!-- Corrected image path -->
                     <img src="images/Career_Timeline_Collaboration_YSEALI.jpg" alt="Global Collaboration" class="highlight-image">
                     <div class="highlight-content">
                         <h3 class="highlight-title">Global Collaboration</h3>
@@ -1088,7 +1085,6 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_SaturdaySchool.jpg" alt="Volunteer Saturday School" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2025</span>
@@ -1101,7 +1097,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Active Media for Moral Ecosystem จัดโดย ศูนย์คุณธรรม.jpg" alt="Media for Moral Ecosystem" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2025</span>
@@ -1114,7 +1109,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Collaboration_YSEALI.jpg" alt="YSEALI" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2025</span>
@@ -1127,7 +1121,6 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_PlayAndLearnLiveStream.png" alt="Community Event" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2025</span>
@@ -1140,7 +1133,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_EnglishQuizReward.png" alt="Community Event" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2025</span>
@@ -1153,7 +1145,6 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Collaboration_GCED CDI.jpg" alt="GCED CDI" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2024</span>
@@ -1166,7 +1157,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Samsung Galaxy Unpacked Paris France 2024.jpg" alt="Samsung Event France" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2024</span>
@@ -1179,7 +1169,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Samsung PlayGalaxy Cup Asia Bootcamp Livestream.jpg" alt="Samsung PlayGalaxy Event" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2024</span>
@@ -1192,7 +1181,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Samsung Galaxy Unpacked 2023.jpg" alt="Samsung Event Korea" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2023</span>
@@ -1205,7 +1193,6 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_Sponsor Infinix Free Fire Star Clash 2022.jpg" alt="Infinix Free Fire Event" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2022</span>
@@ -1242,7 +1229,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Highlight_สร้างช่อง LazyMinday.jpg" alt="Content Creator Start" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2021-Present</span>
@@ -1255,7 +1241,6 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_2_Career_GarenaAcademy.jpg" alt="Game Publisher Job" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2019-2022</span>
@@ -1268,7 +1253,6 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_จีเอม.jpg" alt="Game Publisher Job" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2019-2022</span>
@@ -1281,7 +1265,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_เกียรตินิยมธรรมศาสตร์.jpg" alt="University Graduation" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2019</span>
@@ -1306,7 +1289,6 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_นักเรียนแลกเปลี่ยน.jpg" alt="Exchange Student" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2017</span>
@@ -1330,7 +1312,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_หัวหน้าหลีดคณะ.jpg" alt="Team Leader" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2016</span>
@@ -1367,7 +1348,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_2_Gamer_Audition.jpg" alt="Young Gamer Competition" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">Age 10</span>
@@ -1380,7 +1360,6 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <!-- Corrected image path -->
                         <img src="images/Career_Timeline_1_Gamer.jpg" alt="Young Gamer" class="timeline-image">
                         <div class="timeline-text">
                             <span class="timeline-date">2006</span>
@@ -1471,10 +1450,10 @@
                     this.classList.add('active');
                     
                     // Toggle body class for language
-                    if (lang === 'th') {
-                        document.body.classList.add('lang-th');
+                    if (lang === 'en') {
+                        document.body.classList.add('lang-en');
                     } else {
-                        document.body.classList.remove('lang-th');
+                        document.body.classList.remove('lang-en');
                     }
                 });
             });
